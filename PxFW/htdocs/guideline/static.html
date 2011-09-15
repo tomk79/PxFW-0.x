@@ -1,0 +1,414 @@
+
+<ul>
+	<li>スタティックモジュールは、テーマやメディアタイプなどによらず、常に固定の効果をもたらす静的なモジュールです。</li>
+	<li>スタティックモジュールは、主に視覚効果をそのままモジュール名に採用したような、直接的な効果を提供します。</li>
+	<li>性質上、その使い方は使用者側の判断に委ねられます。スタティックモジュールが提供する効果は融通が利きません。なるべく使用せずに解決するように心がけてください。</li>
+</ul>
+
+<div class="unit">
+<div class="anchorlinks">
+	<h2>目次</h2>
+	<ul>
+		<li><a href="#cont_anch_margin">マージン制御</a></li>
+		<li><a href="#cont_anch_padding">パディング制御</a></li>
+		<li><a href="#cont_anch_bold">太字・細字</a></li>
+		<li><a href="#cont_anch_underline">下線</a></li>
+		<li><a href="#cont_anch_color">色</a></li>
+		<li><a href="#cont_anch_textalign">水平方向文字揃え制御</a></li>
+		<li><a href="#cont_anch_verticalalign">垂直位置制御</a></li>
+		<li><a href="#cont_anch_hidden">非表示</a></li>
+		<li><a href="#cont_anch_lineheight">行間制御</a></li>
+		<li><a href="#cont_anch_position">ポジション制御</a></li>
+		<li><a href="#cont_anch_whitespace">改行制御</a></li>
+		<li><a href="#cont_anch_mediatype">メディアタイプ別パーツ出し分け</a></li>
+		<li><a href="#cont_anch_layout">レイアウト制御</a></li>
+	</ul>
+</div><!-- /.anchorlinks -->
+</div><!-- /.unit -->
+
+
+<a id="cont_anch_margin"></a>
+<h2>マージン制御</h2>
+<table class="deftable" width="100%">
+	<tr>
+		<th><div>.mt1em  </div></th>
+		<td rowspan="3"><div>要素の上方にem単位のマージンをつけます。アンダースコアは小数点を表します(<code>.mt1_5em</code>は、1.5em)。</div></td>
+	</tr>
+	<tr><th><div>.mt1_5em</div></th></tr>
+	<tr><th><div>.mt2em  </div></th></tr>
+
+	<tr>
+		<th><div>.mt0</div></th>
+		<td rowspan="15"><div>要素の上方にマージンをつけます。(単位はpx)</div></td>
+	</tr>
+	<tr><th><div>.mt1 </div></th></tr>
+	<tr><th><div>.mt2 </div></th></tr>
+	<tr><th><div>.mt3 </div></th></tr>
+	<tr><th><div>.mt4 </div></th></tr>
+	<tr><th><div>.mt5 </div></th></tr>
+	<tr><th><div>.mt6 </div></th></tr>
+	<tr><th><div>.mt7 </div></th></tr>
+	<tr><th><div>.mt8 </div></th></tr>
+	<tr><th><div>.mt9 </div></th></tr>
+	<tr><th><div>.mt10</div></th></tr>
+	<tr><th><div>.mt15</div></th></tr>
+	<tr><th><div>.mt20</div></th></tr>
+	<tr><th><div>.mt25</div></th></tr>
+	<tr><th><div>.mt30</div></th></tr>
+
+	<tr>
+		<th><div>.mb1em  </div></th>
+		<td rowspan="3"><div>要素の下方にem単位のマージンをつけます。アンダースコアは小数点を表します(<code>.mb1_5em</code>は、1.5em)。</div></td>
+	</tr>
+	<tr><th><div>.mb1_5em</div></th></tr>
+	<tr><th><div>.mb2em  </div></th></tr>
+
+	<tr>
+		<th><div>.mb0 </div></th>
+		<td rowspan="15"><div>要素の下方にマージンをつけます。(単位はpx)</div></td>
+	</tr>
+	<tr><th><div>.mb1 </div></th></tr>
+	<tr><th><div>.mb2 </div></th></tr>
+	<tr><th><div>.mb3 </div></th></tr>
+	<tr><th><div>.mb4 </div></th></tr>
+	<tr><th><div>.mb5 </div></th></tr>
+	<tr><th><div>.mb6 </div></th></tr>
+	<tr><th><div>.mb7 </div></th></tr>
+	<tr><th><div>.mb8 </div></th></tr>
+	<tr><th><div>.mb9 </div></th></tr>
+	<tr><th><div>.mb10</div></th></tr>
+	<tr><th><div>.mb15</div></th></tr>
+	<tr><th><div>.mb20</div></th></tr>
+	<tr><th><div>.mb25</div></th></tr>
+	<tr><th><div>.mb30</div></th></tr>
+
+	<tr>
+		<th><div>.ml0 </div></th>
+		<td rowspan="15"><div>要素の左方にマージンをつけます。(単位はpx)</div></td>
+	</tr>
+	<tr><th><div>.ml1 </div></th></tr>
+	<tr><th><div>.ml2 </div></th></tr>
+	<tr><th><div>.ml3 </div></th></tr>
+	<tr><th><div>.ml4 </div></th></tr>
+	<tr><th><div>.ml5 </div></th></tr>
+	<tr><th><div>.ml6 </div></th></tr>
+	<tr><th><div>.ml7 </div></th></tr>
+	<tr><th><div>.ml8 </div></th></tr>
+	<tr><th><div>.ml9 </div></th></tr>
+	<tr><th><div>.ml10</div></th></tr>
+	<tr><th><div>.ml15</div></th></tr>
+	<tr><th><div>.ml20</div></th></tr>
+	<tr><th><div>.ml25</div></th></tr>
+	<tr><th><div>.ml30</div></th></tr>
+
+	<tr>
+		<th><div>.mr0 </div></th>
+		<td rowspan="15"><div>要素の右方にマージンをつけます。(単位はpx)</div></td>
+	</tr>
+	<tr><th><div>.mr1 </div></th></tr>
+	<tr><th><div>.mr2 </div></th></tr>
+	<tr><th><div>.mr3 </div></th></tr>
+	<tr><th><div>.mr4 </div></th></tr>
+	<tr><th><div>.mr5 </div></th></tr>
+	<tr><th><div>.mr6 </div></th></tr>
+	<tr><th><div>.mr7 </div></th></tr>
+	<tr><th><div>.mr8 </div></th></tr>
+	<tr><th><div>.mr9 </div></th></tr>
+	<tr><th><div>.mr10</div></th></tr>
+	<tr><th><div>.mr15</div></th></tr>
+	<tr><th><div>.mr20</div></th></tr>
+	<tr><th><div>.mr25</div></th></tr>
+	<tr><th><div>.mr30</div></th></tr>
+
+</table>
+
+<px:back2top />
+
+
+<a id="cont_anch_padding"></a>
+<h2>パディング制御</h2>
+<table class="deftable" width="100%">
+	<tr>
+		<th><div>.pt1em  </div></th>
+		<td rowspan="3"><div>要素の上方にem単位のパディングをつけます。アンダースコアは小数点を表します(<code>.pt1_5em</code>は、1.5em)。</div></td>
+	</tr>
+	<tr><th><div>.pt1_5em</div></th></tr>
+	<tr><th><div>.pt2em  </div></th></tr>
+
+	<tr>
+		<th><div>.pt0 </div></th>
+		<td rowspan="15"><div>要素の上方にパディングをつけます。(単位はpx)</div></td>
+	</tr>
+	<tr><th><div>.pt1 </div></th></tr>
+	<tr><th><div>.pt2 </div></th></tr>
+	<tr><th><div>.pt3 </div></th></tr>
+	<tr><th><div>.pt4 </div></th></tr>
+	<tr><th><div>.pt5 </div></th></tr>
+	<tr><th><div>.pt6 </div></th></tr>
+	<tr><th><div>.pt7 </div></th></tr>
+	<tr><th><div>.pt8 </div></th></tr>
+	<tr><th><div>.pt9 </div></th></tr>
+	<tr><th><div>.pt10</div></th></tr>
+	<tr><th><div>.pt15</div></th></tr>
+	<tr><th><div>.pt20</div></th></tr>
+	<tr><th><div>.pt25</div></th></tr>
+	<tr><th><div>.pt30</div></th></tr>
+
+	<tr>
+		<th><div>.pb1em  </div></th>
+		<td rowspan="3"><div>要素の下方にem単位のパディングをつけます。アンダースコアは小数点を表します(<code>.pb1_5em</code>は、1.5em)。</div></td>
+	</tr>
+	<tr><th><div>.pb1_5em</div></th></tr>
+	<tr><th><div>.pb2em  </div></th></tr>
+
+	<tr>
+		<th><div>.pb0 </div></th>
+		<td rowspan="15"><div>要素の下方にパディングをつけます。(単位はpx)</div></td>
+	</tr>
+	<tr><th><div>.pb1 </div></th></tr>
+	<tr><th><div>.pb2 </div></th></tr>
+	<tr><th><div>.pb3 </div></th></tr>
+	<tr><th><div>.pb4 </div></th></tr>
+	<tr><th><div>.pb5 </div></th></tr>
+	<tr><th><div>.pb6 </div></th></tr>
+	<tr><th><div>.pb7 </div></th></tr>
+	<tr><th><div>.pb8 </div></th></tr>
+	<tr><th><div>.pb9 </div></th></tr>
+	<tr><th><div>.pb10</div></th></tr>
+	<tr><th><div>.pb15</div></th></tr>
+	<tr><th><div>.pb20</div></th></tr>
+	<tr><th><div>.pb25</div></th></tr>
+	<tr><th><div>.pb30</div></th></tr>
+
+	<tr>
+		<th><div>.pl0 </div></th>
+		<td rowspan="15"><div>要素の左方にパディングをつけます。(単位はpx)</div></td>
+	</tr>
+	<tr><th><div>.pl1 </div></th></tr>
+	<tr><th><div>.pl2 </div></th></tr>
+	<tr><th><div>.pl3 </div></th></tr>
+	<tr><th><div>.pl4 </div></th></tr>
+	<tr><th><div>.pl5 </div></th></tr>
+	<tr><th><div>.pl6 </div></th></tr>
+	<tr><th><div>.pl7 </div></th></tr>
+	<tr><th><div>.pl8 </div></th></tr>
+	<tr><th><div>.pl9 </div></th></tr>
+	<tr><th><div>.pl10</div></th></tr>
+	<tr><th><div>.pl15</div></th></tr>
+	<tr><th><div>.pl20</div></th></tr>
+	<tr><th><div>.pl25</div></th></tr>
+	<tr><th><div>.pl30</div></th></tr>
+
+	<tr>
+		<th><div>.pr0 </div></th>
+		<td rowspan="15"><div>要素の右方にパディングをつけます。(単位はpx)</div></td>
+	</tr>
+	<tr><th><div>.pr1 </div></th></tr>
+	<tr><th><div>.pr2 </div></th></tr>
+	<tr><th><div>.pr3 </div></th></tr>
+	<tr><th><div>.pr4 </div></th></tr>
+	<tr><th><div>.pr5 </div></th></tr>
+	<tr><th><div>.pr6 </div></th></tr>
+	<tr><th><div>.pr7 </div></th></tr>
+	<tr><th><div>.pr8 </div></th></tr>
+	<tr><th><div>.pr9 </div></th></tr>
+	<tr><th><div>.pr10</div></th></tr>
+	<tr><th><div>.pr15</div></th></tr>
+	<tr><th><div>.pr20</div></th></tr>
+	<tr><th><div>.pr25</div></th></tr>
+	<tr><th><div>.pr30</div></th></tr>
+
+</table>
+
+
+<px:back2top />
+
+
+<a id="cont_anch_bold"></a>
+<h2>太字・細字</h2>
+<table class="deftable" width="100%">
+	<tr>
+		<th style="width:30%;">.bold</th>
+		<td style="width:70%;"><code>font-weight:bold;</code> を適用します。</td>
+	</tr>
+	<tr>
+		<th style="width:30%;">.narrow</th>
+		<td style="width:70%;"><code>font-weight:normal;</code> を適用します。</td>
+	</tr>
+</table>
+
+
+<px:back2top />
+
+
+<a id="cont_anch_underline"></a>
+<h2>下線</h2>
+<table class="deftable" width="100%">
+	<tr>
+		<th style="width:30%;">.underline</th>
+		<td style="width:70%;"><code>text-decoration:underline;</code> を適用します。</td>
+	</tr>
+</table>
+
+
+<px:back2top />
+
+
+<a id="cont_anch_color"></a>
+<h2>色</h2>
+<table class="deftable" width="100%">
+	<tr>
+		<th style="width:30%;">.color_red</th>
+		<td style="width:70%;" rowspan="2">文字色を<code>#ff0000</code>にする。</td>
+	</tr>
+	<tr><th>.red</th></tr>
+	<tr>
+		<th>.color_green</th>
+		<td rowspan="2">文字色を<code>#00ff00</code>にする。</td>
+	</tr>
+	<tr><th>.green</th></tr>
+	<tr>
+		<th>.color_blue</th>
+		<td rowspan="2">文字色を<code>#0000ff</code>にする。</td>
+	</tr>
+	<tr><th>.blue</th></tr>
+	<tr>
+		<th>.color_white</th>
+		<td rowspan="2">文字色を<code>#ffffff</code>にする。</td>
+	</tr>
+	<tr><th>.white</th></tr>
+	<tr>
+		<th>.color_black</th>
+		<td rowspan="2">文字色を<code>#000000</code>にする。</td>
+	</tr>
+	<tr><th>.black</th></tr>
+
+	<tr><th>.bg_red  </th><td>背景色を<code>#ff0000</code>にする。</td></tr>
+	<tr><th>.bg_green</th><td>背景色を<code>#00ff00</code>にする。</td></tr>
+	<tr><th>.bg_blue </th><td>背景色を<code>#0000ff</code>にする。</td></tr>
+	<tr><th>.bg_white</th><td>背景色を<code>#ffffff</code>にする。</td></tr>
+	<tr><th>.bg_black</th><td>背景色を<code>#000000</code>にする。</td></tr>
+</table>
+
+
+<px:back2top />
+
+
+<a id="cont_anch_textalign"></a>
+<h2>水平方向文字揃え制御</h2>
+
+<table class="deftable" width="100%">
+	<tr><th style="width:30%;">.al</th><td style="width:70%;" rowspan="2"><code>text-align:left;</code>を適用します。</td></tr>
+	<tr><th style="width:30%;">.AlignL</th></tr>
+	<tr><th style="width:30%;">.ac</th><td style="width:70%;" rowspan="3"><code>text-align:center;</code>を適用します。</td></tr>
+	<tr><th style="width:30%;">.center</th></tr>
+	<tr><th style="width:30%;">.AlignC</th></tr>
+	<tr><th style="width:30%;">.ar</th><td style="width:70%;" rowspan="2"><code>text-align:right;</code>を適用します。</td></tr>
+	<tr><th style="width:30%;">.AlignR</th></tr>
+</table>
+
+
+<px:back2top />
+
+
+<a id="cont_anch_verticalalign"></a>
+<h2>垂直位置制御</h2>
+<table class="deftable" width="100%">
+	<tr><th style="width:30%;">.vt </th><td style="width:70%;"><code>vertical-align:top;     </code>を適用します。</td></tr>
+	<tr><th style="width:30%;">.vm </th><td style="width:70%;"><code>vertical-align:middle;  </code>を適用します。</td></tr>
+	<tr><th style="width:30%;">.vb </th><td style="width:70%;"><code>vertical-align:bottom;  </code>を適用します。</td></tr>
+	<tr><th style="width:30%;">.vbl</th><td style="width:70%;"><code>vertical-align:baseline;</code>を適用します。</td></tr>
+</table>
+
+
+<px:back2top />
+
+
+<a id="cont_anch_hidden"></a>
+<h2>非表示</h2>
+<table class="deftable" width="100%">
+	<tr><th style="width:30%;">.hidden</th><td style="width:70%;"><code>display:none;</code>を適用します。</td></tr>
+</table>
+
+
+
+<px:back2top />
+
+
+<a id="cont_anch_lineheight"></a>
+<h2>行間制御</h2>
+<table class="deftable" width="100%">
+	<tr><th style="width:30%;">.lh1</th><td style="width:70%;"><code>line-height:1;</code>を適用します。</td></tr>
+</table>
+
+
+<px:back2top />
+
+
+<a id="cont_anch_position"></a>
+<h2>ポジション制御</h2>
+<table class="deftable" width="100%">
+	<tr><th style="width:30%;">.relative</th><td style="width:70%;"><code>position:relative;</code>を適用します。</td></tr>
+</table>
+
+
+<px:back2top />
+
+
+<a id="cont_anch_whitespace"></a>
+<h2>改行制御</h2>
+<table class="deftable" width="100%">
+	<tr><th style="width:30%;">.nowrap</th><td style="width:70%;"><code>white-space:nowrap;</code>を適用します。</td></tr>
+	<tr><th style="width:30%;">.pre</th><td style="width:70%;"><code>white-space:pre;</code>を適用します。</td></tr>
+</table>
+
+
+<px:back2top />
+
+
+<a id="cont_anch_mediatype"></a>
+<h2>メディアタイプ別パーツ出し分け</h2>
+<table class="deftable" width="100%">
+	<tr><th style="width:30%;">.show_screen   </th><td style="width:70%;">PCスクリーンに表示します。          </td></tr>
+	<tr><th style="width:30%;">.hide_screen   </th><td style="width:70%;">PCスクリーンに表示しません。        </td></tr>
+	<tr><th style="width:30%;">.show_handheld </th><td style="width:70%;">ハンドヘルドメディアに表示します。  </td></tr>
+	<tr><th style="width:30%;">.hide_handheld </th><td style="width:70%;">ハンドヘルドメディアに表示しません。</td></tr>
+	<tr><th style="width:30%;">.show_print    </th><td style="width:70%;">印刷メディアに表示します。          </td></tr>
+	<tr><th style="width:30%;">.hide_print    </th><td style="width:70%;">印刷メディアに表示しません。        </td></tr>
+	<tr><th style="width:30%;">.show_tv       </th><td style="width:70%;">テレビメディアに表示します。        </td></tr>
+	<tr><th style="width:30%;">.hide_tv       </th><td style="width:70%;">テレビメディアに表示しません。      </td></tr>
+	<tr><th style="width:30%;">.auralinfo     </th><td style="width:70%;">読み上げブラウザ対応のための隠しナビゲーションを表現します。視覚メディアには表示されませんが、音声読み上げブラウザには読み上げられます。</td></tr>
+</table>
+
+<p>
+	基本的にブロック要素全般に作用します。インライン要素を出しわけたい場合は、span要素に対して適用してください。<br />
+</p>
+
+
+<px:back2top />
+
+
+
+<a id="cont_anch_layout"></a>
+<h2>レイアウト制御</h2>
+<table class="deftable" width="100%">
+	<tr>
+		<th style="width:30%;">.clearfix</th>
+		<td style="width:70%;">クリアフィックス効果をかけます。</td>
+	</tr>
+	<tr>
+		<th style="width:30%;">.rect</th>
+		<td style="width:70%;">矩形を崩さないボックス要素にします。<code>.FloatL</code> など <code>float</code> 系のモジュールにより回り込み処理されるが、矩形を崩したくない場合などに使用します。</td>
+	</tr>
+	<tr>
+		<th style="width:30%;">table.layouttable</th>
+		<td style="width:70%;">レイアウト用のテーブルを配置します。旧来のテーブルレイアウトを行うためのモジュールとして用意されました。意味づけを無視したマークアップが前提になるので、なるべく使用しないでください。</td>
+	</tr>
+	<tr>
+		<th style="width:30%;">.reset</th>
+		<td style="width:70%;">リセットCSSを部分的にかけるために使用します。</td>
+	</tr>
+</table>
+
+
+

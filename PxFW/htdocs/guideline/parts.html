@@ -1,0 +1,1171 @@
+
+<ul>
+	<li>パーツは、特に記載のない限り、他のパーツと組み合わせて使うことができます。</li>
+	<li>パーツは、もちろん、単体で使用することもできます。しかし、前後の文脈によっては不整合が起きる可能性があります。その場合は、<code>div.unit</code> に包んで独立させてください。</li>
+</ul>
+
+<div class="unit">
+<div class="anchorlinks">
+	<h2>目次</h2>
+	<ul>
+		<li><a href="#cont_anch_paragraph">段落</a></li>
+		<li><a href="#cont_anch_header">見出し</a></li>
+		<li><a href="#cont_anch_fontsize">文字サイズ指定</a></li>
+		<li><a href="#cont_anch_fontsize_fix">文字サイズ指定(固定サイズ)</a></li>
+		<li><a href="#cont_anch_link">ハイパーリンク</a></li>
+		<li><a href="#cont_anch_inline">インライン要素</a></li>
+		<li><a href="#cont_anch_color">色</a></li>
+		<li><a href="#cont_anch_list">リスト</a></li>
+		<li><a href="#cont_anch_olist">番号つきリスト</a></li>
+		<li><a href="#cont_anch_dlist">定義リスト</a></li>
+		<li><a href="#cont_anch_list_annotation">注釈リスト</a></li>
+		<li><a href="#cont_anch_list_annotation_dl">注釈定義リスト</a></li>
+		<li><a href="#cont_anch_list_none">リストマークなしのリスト</a></li>
+		<li><a href="#cont_anch_list_horizontal">水平レイアウトのリスト</a></li>
+		<li><a href="#cont_anch_anchorlinks">ページ内リンク</a></li>
+		<li><a href="#cont_anch_deftable">テーブル</a></li>
+		<li><a href="#cont_anch_float">回り込み</a></li>
+		<li><a href="#cont_anch_back2top">ページの先頭へ戻るリンク</a></li>
+		<li><a href="#cont_anch_indent">インデント</a></li>
+		<li><a href="#cont_anch_blockquote">引用</a></li>
+		<li><a href="#cont_anch_sourcecode">ソースコード</a></li>
+		<li><a href="#cont_anch_information">お知らせ欄</a></li>
+		<li><a href="#cont_anch_postscript">追記</a></li>
+		<li><a href="#cont_anch_haribotekit">はりぼてキット (画像置換)</a></li>
+		<li><a href="#cont_anch_forms">フォーム</a></li>
+	</ul>
+</div><!-- /.anchorlinks -->
+</div><!-- /.unit -->
+
+
+
+
+
+<h2 id="cont_anch_paragraph">段落</h2>
+
+<p>
+	段落は、通常のHTMLの通り p要素 で表現します。<br />
+</p>
+<div class="sourcecode"><pre>&lt;p&gt;<var>
+	段落は、通常のHTMLの通り p要素 で表現します。&lt;br /&gt;
+</var>&lt;/p&gt;
+</pre></div>
+
+<px:back2top />
+
+<h2 id="cont_anch_header">見出し</h2>
+
+
+<h2>&lt;h2&gt;見出し</h2>
+<div class="sourcecode"><pre>&lt;h2&gt;h2見出し&lt;/h2&gt;</pre></div>
+
+<h3>&lt;h3&gt;見出し</h3>
+<div class="sourcecode"><pre>&lt;h3&gt;h3見出し&lt;/h3&gt;</pre></div>
+
+<h4>&lt;h4&gt;見出し</h4>
+<div class="sourcecode"><pre>&lt;h4&gt;h4見出し&lt;/h4&gt;</pre></div>
+
+<h5>&lt;h5&gt;見出し</h5>
+<div class="sourcecode"><pre>&lt;h5&gt;h5見出し&lt;/h5&gt;</pre></div>
+
+<h6>&lt;h6&gt;見出し</h6>
+<div class="sourcecode"><pre>&lt;h6&gt;h6見出し&lt;/h6&gt;</pre></div>
+
+
+
+
+<px:back2top />
+
+
+<a id="cont_anch_fontsize"></a>
+<h2>文字サイズ指定</h2>
+
+<div class="unit">
+<div class="FloatR">
+<table class="deftable" width="230">
+	<caption>文字サイズ指定パーツ一覧</caption>
+	<thead>
+		<tr>
+			<th>クラス名</th>
+			<th>大きさ</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>.ttrll</th>
+			<td class="ttrll" rowspan="2">最大</td>
+		</tr>
+		<tr>
+			<th>.x-large</th>
+		</tr>
+		<tr>
+			<th>.ttrl</th>
+			<td class="ttrl" rowspan="2">大</td>
+		</tr>
+		<tr>
+			<th>.large</th>
+		</tr>
+		<tr>
+			<th>.ttr</th>
+			<td class="ttr" rowspan="2">中 (標準)</td>
+		</tr>
+		<tr>
+			<th>.medium</th>
+		</tr>
+		<tr>
+			<th>.ttrs</th>
+			<td class="ttrs" rowspan="2">小</td>
+		</tr>
+		<tr>
+			<th>.small</th>
+		</tr>
+		<tr>
+			<th>.ttrss</th>
+			<td class="ttrss" rowspan="2">最小</td>
+		</tr>
+		<tr>
+			<th>.x-small</th>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<p>
+	文字サイズは最大、大、中、小、最小の5つのサイズから選択できます。何も指定しない場合、中のサイズが適用されます。<br />
+</p>
+<p>
+	これらのパーツは、基本的にはどの要素にも適用可能です。次のように指定します。<br />
+</p>
+<div class="sourcecode"><pre>&lt;p class=&quot;<strong>ttrll</strong>&quot;&gt;<var>
+  .ttrll は最大文字サイズを表すクラスです。&lt;br /&gt;
+</var>&lt;/p&gt;
+</pre></div>
+
+
+</div><!-- /.unit -->
+
+<h3>使用例</h3>
+<p class="ttrll">
+	最大サイズの文字列です。<br />
+</p>
+<p class="ttrl">
+	大きいサイズの文字列です。<br />
+</p>
+<p class="ttr">
+	通常の文字列です。<br />
+</p>
+<p class="ttrs">
+	小さいサイズの文字列です。<br />
+</p>
+<p class="ttrss">
+	最小サイズの文字列です。<br />
+</p>
+<div class="sourcecode"><pre>&lt;p class=&quot;<strong>ttrll</strong>&quot;&gt;<var>
+	最大サイズの文字列です。&lt;br /&gt;
+</var>&lt;/p&gt;
+&lt;p class=&quot;<strong>ttrl</strong>&quot;&gt;<var>
+	大きいサイズの文字列です。&lt;br /&gt;
+</var>&lt;/p&gt;
+&lt;p class=&quot;<strong>ttr</strong>&quot;&gt;<var>
+	通常のサイズの文字列です。&lt;br /&gt;
+</var>&lt;/p&gt;
+&lt;p class=&quot;<strong>ttrs</strong>&quot;&gt;<var>
+	小さいサイズの文字列です。&lt;br /&gt;
+</var>&lt;/p&gt;
+&lt;p class=&quot;<strong>ttrss</strong>&quot;&gt;<var>
+	最小サイズの文字列です。&lt;br /&gt;
+</var>&lt;/p&gt;
+</pre></div>
+
+
+
+<a id="cont_anch_fontsize_fix"></a>
+<h2>文字サイズ指定(固定サイズ)</h2>
+<div class="unit">
+<div class="FloatR">
+<table class="deftable" width="230">
+	<caption>文字サイズ指定パーツ一覧</caption>
+	<thead>
+		<tr>
+			<th>クラス名</th>
+			<th>大きさ</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>.fstll</th>
+			<td class="fstll">最大</td>
+		</tr>
+		<tr>
+			<th>.fstl</th>
+			<td class="fstl">大</td>
+		</tr>
+		<tr>
+			<th>.fst</th>
+			<td class="fst">中 (標準)</td>
+		</tr>
+		<tr>
+			<th>.fsts</th>
+			<td class="fsts">小</td>
+		</tr>
+		<tr>
+			<th>.fstss</th>
+			<td class="fstss">最小</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<p>
+	<code>.fstll</code>, <code>.fstl</code>, <code>.fst</code>, <code>.fsts</code>, <code>.fstss</code> は、ttr系と同様の文字サイズを提供しますが、Internet Explorerで文字サイズの変更を禁止します。<br />
+</p>
+</div>
+
+<h3>使用例</h3>
+<p class="fstll">
+	最大サイズ(サイズ固定)の文字列です。<br />
+</p>
+<p class="fstl">
+	大きいサイズ(サイズ固定)の文字列です。<br />
+</p>
+<p class="fst">
+	通常のサイズ(サイズ固定)の文字列です。<br />
+</p>
+<p class="fsts">
+	小さいサイズ(サイズ固定)の文字列です。<br />
+</p>
+<p class="fstss">
+	最小サイズ(サイズ固定)の文字列です。<br />
+</p>
+<div class="sourcecode"><pre>&lt;p class=&quot;<strong>fstll</strong>&quot;&gt;<var>
+    最大サイズ(サイズ固定)の文字列です。&lt;br /&gt;
+</var>&lt;/p&gt;
+&lt;p class=&quot;<strong>fstl</strong>&quot;&gt;<var>
+    大きいサイズ(サイズ固定)の文字列です。&lt;br /&gt;
+</var>&lt;/p&gt;
+&lt;p class=&quot;<strong>fst</strong>&quot;&gt;<var>
+    通常のサイズ(サイズ固定)の文字列です。&lt;br /&gt;
+</var>&lt;/p&gt;
+&lt;p class=&quot;<strong>fsts</strong>&quot;&gt;<var>
+    小さいサイズ(サイズ固定)の文字列です。&lt;br /&gt;
+</var>&lt;/p&gt;
+&lt;p class=&quot;<strong>fstss</strong>&quot;&gt;<var>
+    最小サイズ(サイズ固定)の文字列です。&lt;br /&gt;
+</var>&lt;/p&gt;
+</pre></div>
+
+
+
+
+
+<px:back2top />
+
+
+
+
+
+<a id="cont_anch_link"></a>
+<h2>ハイパーリンク</h2>
+
+<ul>
+	<li><a href="#">通常リンク</a></li>
+	<li><a href="#" class="active">アクティブリンク</a></li>
+	<li><a href="#" class="plain">プレーンテキストリンク</a></li>
+</ul>
+
+<blockquote class="sourcecode"><pre>&lt;a href=&quot;<var>***</var>&quot;&gt;<var>通常リンク</var>&lt;/a&gt;
+&lt;a href=&quot;<var>***</var>&quot; class=&quot;<strong>active</strong>&quot;&gt;<var>アクティブリンク</var>&lt;/a&gt;
+&lt;a href=&quot;<var>***</var>&quot; class=&quot;<strong>plain</strong>&quot;&gt;<var>プレーンテキストリンク</var>&lt;/a&gt;
+</pre></blockquote>
+
+<h3>viewstyle と連動したリンク</h3>
+<p>
+	次のリンク表現のサンプルは、Pickles Framework の viewstyle 機構と連動して表現されます。HTMLのコンテンツでは、<code>&lt;a href=&quot;#&quot; tstyle=&quot;inside&quot;&gt;サイト内リンク&lt;/a&gt;</code> のように、tstyle属性にスタイル名を指定します。<br />
+</p>
+<ul>
+	<li><a href="#" tstyle="inside">サイト内リンク</a></li>
+	<li><a href="#" tstyle="exit">サイト外リンク</a></li>
+	<li><a href="#" tstyle="help">ヘルプリンク</a></li>
+	<li><a href="#" tstyle="button">ボタンリンク</a></li>
+</ul>
+
+<blockquote class="sourcecode"><pre>&lt;a href=&quot;<var>***</var>&quot; <strong>tstyle=&quot;inside&quot;</strong>&gt;<var>サイト内リンク</var>&lt;/a&gt;
+&lt;a href=&quot;<var>***</var>&quot; <strong>tstyle=&quot;exit&quot;</strong>&gt;<var>サイト外リンク</var>&lt;/a&gt;
+&lt;a href=&quot;<var>***</var>&quot; <strong>tstyle=&quot;help&quot;</strong>&gt;<var>ヘルプリンク</var>&lt;/a&gt;
+&lt;a href=&quot;<var>***</var>&quot; <strong>tstyle=&quot;button&quot;</strong>&gt;<var>ボタンリンク</var>&lt;/a&gt;
+</pre></blockquote>
+
+
+
+<px:back2top />
+
+
+
+
+
+<h2 id="cont_anch_inline">インライン要素</h2>
+<ul>
+	<li><code>ソースコード</code></li>
+	<li><var>変数</var></li>
+	<li><q>引用</q></li>
+	<li><strong>強調</strong>、<em>強調</em></li>
+	<li><span class="annotation">注釈</span></li>
+	<li><span class="error">エラーメッセージ</span></li>
+	<li><span class="attention">注意</span></li>
+	<li><span class="alert">警告</span></li>
+	<li><span class="caution">警告(強)</span></li>
+	<li><span class="warning">警告(最強)</span></li>
+	<li><span class="must">*必須</span></li>
+	<li><span class="date">1月1日</span> (日付)</li>
+	<li><span class="price">10,000円</span> (価格)</li>
+</ul>
+
+<div class="sourcecode"><pre>&lt;code&gt;<var>ソースコード</var>&lt;/code&gt;
+&lt;var&gt;<var>変数</var>&lt;/var&gt;
+&lt;q&gt;<var>引用</var>&lt;/q&gt;
+&lt;strong&gt;<var>強調</var>&lt;/strong&gt;、&lt;em&gt;<var>強調</var>&lt;/em&gt;
+&lt;span class=&quot;<strong>annotation</strong>&quot;&gt;<var>注釈</var>&lt;/span&gt;
+&lt;span class=&quot;<strong>error</strong>&quot;&gt;<var>エラーメッセージ</var>&lt;/span&gt;
+&lt;span class=&quot;<strong>attention</strong>&quot;&gt;<var>注意</var>&lt;/span&gt;
+&lt;span class=&quot;<strong>alert</strong>&quot;&gt;<var>警告</var>&lt;/span&gt;
+&lt;span class=&quot;<strong>caution</strong>&quot;&gt;<var>警告(強)</var>&lt;/span&gt;
+&lt;span class=&quot;<strong>warning</strong>&quot;&gt;<var>警告(最強)</var>&lt;/span&gt;
+&lt;span class=&quot;<strong>must</strong>&quot;&gt;*必須&lt;/span&gt;
+&lt;span class=&quot;<strong>date</strong>&quot;&gt;<var>1月1日</var>&lt;/span&gt;
+&lt;span class=&quot;<strong>price</strong>&quot;&gt;<var>10,000円</var>&lt;/span&gt;
+</pre></div>
+
+
+<px:back2top />
+
+
+
+
+
+<a id="cont_anch_color"></a>
+<h2>色</h2>
+<p>
+	<code>.keycolor</code>, <code>.bgkeycolor</code>, <code>.subcolor</code>, <code>.bgsubcolor</code> は、サイトの基調色を扱うモジュールです。<br />
+</p>
+
+<p class="keycolor">サイトのキーカラー。</p>
+<div class="sourcecode"><pre>&lt;p class=&quot;<strong>keycolor</strong>&quot;&gt;サイトのキーカラー。&lt;/p&gt;</pre></div>
+<p class="bgkeycolor">サイトのキーカラー(背景)。</p>
+<div class="sourcecode"><pre>&lt;p class=&quot;<strong>bgkeycolor</strong>&quot;&gt;サイトのキーカラー(背景)。&lt;/p&gt;</pre></div>
+<p class="subcolor">サイトのサブカラー。</p>
+<div class="sourcecode"><pre>&lt;p class=&quot;<strong>subcolor</strong>&quot;&gt;サイトのサブカラー。&lt;/p&gt;</pre></div>
+<p class="bgsubcolor">サイトのサブカラー(背景)。</p>
+<div class="sourcecode"><pre>&lt;p class=&quot;<strong>bgsubcolor</strong>&quot;&gt;サイトのサブカラー(背景)。&lt;/p&gt;</pre></div>
+
+<px:back2top />
+
+
+
+
+
+<a id="cont_anch_list"></a>
+<h2>リスト</h2>
+<ul>
+	<li>ここはリストの文字列です。</li>
+	<li>ここはリストの文字列です。</li>
+	<li>ここはリストの文字列です。
+		<ul>
+			<li>ここはリストの文字列です。</li>
+			<li>ここはリストの文字列です。</li>
+		</ul>
+	</li>
+	<li>ここはリストの文字列です。</li>
+</ul>
+
+<blockquote class="sourcecode"><pre>&lt;ul&gt;
+    &lt;li&gt;ここはリストの文字列です。&lt;/li&gt;
+    &lt;li&gt;ここはリストの文字列です。
+        &lt;ul&gt;
+            &lt;li&gt;ここはリストの文字列です。&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;ここはリストの文字列です。&lt;/li&gt;
+&lt;/ul&gt;
+</pre></blockquote>
+
+<ul class="annotation">
+	<li>※Internet Explorer で上下に余計なマージンが入る場合があります。このときは、 <code>li</code> 内の最初の要素に <code>.mt0</code> を、最後の要素に <code>.mb0</code> を設定してください。</li>
+</ul>
+
+
+<px:back2top />
+
+
+
+
+
+<a id="cont_anch_olist"></a>
+<h2>番号つきリスト</h2>
+<ol>
+	<li>ここは番号付きリストの文字列です。</li>
+	<li>ここは番号付きリストの文字列です。</li>
+	<li>ここは番号付きリストの文字列です。
+		<ol>
+			<li>ここは番号付きリストの文字列です。</li>
+			<li>ここは番号付きリストの文字列です。</li>
+		</ol>
+	</li>
+	<li>ここは番号付きリストの文字列です。</li>
+</ol>
+
+<blockquote class="sourcecode"><pre>&lt;ol&gt;
+    &lt;li&gt;ここは番号付きリストの文字列です。&lt;/li&gt;
+    &lt;li&gt;ここは番号付きリストの文字列です。
+        &lt;ol&gt;
+            &lt;li&gt;ここは番号付きリストの文字列です。&lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/li&gt;
+    &lt;li&gt;ここは番号付きリストの文字列です。&lt;/li&gt;
+&lt;/ol&gt;
+</pre></blockquote>
+
+<ul class="annotation">
+	<li>※Internet Explorer で上下に余計なマージンが入る場合があります。このときは、 <code>li</code> 内の最初の要素に <code>.mt0</code> を、最後の要素に <code>.mb0</code> を設定してください。</li>
+</ul>
+
+
+
+<px:back2top />
+
+
+
+
+
+<a id="cont_anch_dlist"></a>
+<h2>定義リスト</h2>
+
+<dl>
+	<dt>定義リスト</dt>
+		<dd>定義内容説明文。定義内容説明文。</dd>
+	<dt>定義リスト</dt>
+		<dd>定義内容説明文。定義内容説明文。</dd>
+	<dt>定義リスト</dt>
+		<dd>定義内容説明文。定義内容説明文。</dd>
+</dl>
+
+<div class="sourcecode"><pre>&lt;dl&gt;
+    &lt;dt&gt;定義リスト&lt;/dt&gt;
+        &lt;dd&gt;定義内容説明文。定義内容説明文。&lt;/dd&gt;
+&lt;/dl&gt;
+</pre></div>
+
+<ul class="annotation">
+	<li>※Internet Explorer で上下に余計なマージンが入る場合があります。このときは、 <code>li</code> 内の最初の要素に <code>.mt0</code> を、最後の要素に <code>.mb0</code> を設定してください。</li>
+</ul>
+
+
+
+
+<px:back2top />
+
+
+
+
+
+<a id="cont_anch_list_annotation"></a>
+<h2>注釈リスト</h2>
+
+<ul class="annotation">
+	<li>※この項目には、IE6/7対応のために、※印をHTML側に書く必要があります。この項目には、IE6/7対応のために、※印をHTML側に書く必要があります。この項目には、IE6/7対応のために、※印をHTML側に書く必要があります。この項目には、IE6/7対応のために、※印をHTML側に書く必要があります。</li>
+</ul>
+
+<div class="sourcecode"><pre>&lt;ul class=&quot;<strong>annotation</strong>&quot;&gt;
+    &lt;li&gt;※<var>この項目には、IE6/7対応のために、※印をHTML側に書く必要があります。</var>&lt;/li&gt;
+&lt;/ul&gt;
+</pre></div>
+
+
+
+
+<px:back2top />
+
+
+
+
+
+<a id="cont_anch_list_annotation_dl"></a>
+<h2>注釈定義リスト</h2>
+
+<p>
+	&lt;ul&gt;タグに適用する <code>.annotation</code> は、注釈の一覧を定義するのみです。注釈の対象をより詳細に指示する必要がある場合は、&lt;dl&gt;タグを用います。<br />
+</p>
+<p>
+	注釈を示す対象の箇所には、<code>&lt;sup&gt;</code>タグ を用いて <sup>※1</sup> のように表現します。<br />
+</p>
+<blockquote class="sourcecode"><pre>&lt;code&gt;&amp;lt;sup&amp;gt;&lt;/code&gt;タグ を用いて <strong>&lt;sup&gt;※1&lt;/sup&gt;</strong> のように表現します。
+</pre></blockquote>
+<dl class="annotation">
+	<dt>※1</dt>
+		<dd>定義内容説明文。定義内容説明文。</dd>
+	<dt>※2</dt>
+		<dd>定義内容説明文。定義内容説明文。</dd>
+	<dt>※333</dt>
+		<dd>長い定義内容説明文。長い定義内容説明文。長い定義内容説明文。長い定義内容説明文。長い定義内容説明文。長い定義内容説明文。長い定義内容説明文。長い定義内容説明文。</dd>
+	<dt>※44444</dt>
+		<dd>長い定義内容説明文。長い定義内容説明文。長い定義内容説明文。長い定義内容説明文。長い定義内容説明文。長い定義内容説明文。長い定義内容説明文。長い定義内容説明文。</dd>
+</dl>
+<blockquote class="sourcecode"><pre>&lt;dl class=&quot;<strong>annotation</strong>&quot;&gt;
+	&lt;dt&gt;※<var>1</var>&lt;/dt&gt;
+		&lt;dd&gt;<var>定義内容説明文。定義内容説明文。</var>&lt;/dd&gt;
+	&lt;dt&gt;※<var>2</var>&lt;/dt&gt;
+		&lt;dd&gt;<var>定義内容説明文。定義内容説明文。</var>&lt;/dd&gt;
+	&lt;dt&gt;※<var>3</var>&lt;/dt&gt;
+		&lt;dd&gt;<var>定義内容説明文。定義内容説明文。</var>&lt;/dd&gt;
+&lt;/dl&gt;
+</pre></blockquote>
+
+
+
+
+<px:back2top />
+
+
+
+
+
+<a id="cont_anch_list_none"></a>
+<h2>リストマークなしのリスト</h2>
+
+<ul class="none">
+	<li>リストです。リストです。リストです。</li>
+	<li>リストです。リストです。リストです。</li>
+	<li>リストです。リストです。リストです。</li>
+</ul>
+
+<div class="sourcecode"><pre>&lt;ul class=&quot;<strong>none</strong>&quot;&gt;
+    &lt;li&gt;<var>リストです。リストです。リストです。</var>&lt;/li&gt;
+&lt;/ul&gt;
+</pre></div>
+
+<ol class="none">
+	<li>番号付きリストです。番号付きリストです。番号付きリストです。</li>
+	<li>番号付きリストです。番号付きリストです。番号付きリストです。</li>
+	<li>番号付きリストです。番号付きリストです。番号付きリストです。</li>
+</ol>
+
+<div class="sourcecode"><pre>&lt;ol class=&quot;<strong>none</strong>&quot;&gt;
+    &lt;li&gt;<var>番号付きリストです。番号付きリストです。番号付きリストです。</var>&lt;/li&gt;
+&lt;/ol&gt;
+</pre></div>
+
+
+
+
+
+
+
+
+<px:back2top />
+
+
+
+<a id="cont_anch_list_horizontal"></a>
+<h2>水平レイアウトのリスト</h2>
+<ul class="horizontal">
+	<li>ul水平レイアウトリスト</li>
+	<li>ul水平レイアウトリスト</li>
+	<li>ul水平レイアウトリスト</li>
+	<li>ul水平レイアウトリスト</li>
+	<li>ul水平レイアウトリスト</li>
+	<li>ul水平レイアウトリスト</li>
+	<li>ul水平レイアウトリスト</li>
+	<li>ul水平レイアウトリスト</li>
+	<li>ul水平レイアウトリスト</li>
+</ul>
+
+<div class="sourcecode"><pre>&lt;ul class=&quot;<strong>horizontal</strong>&quot;&gt;
+    &lt;li&gt;<var>ul水平レイアウトリスト</var>&lt;/li&gt;
+&lt;/ul&gt;
+</pre></div>
+
+<ol class="horizontal">
+	<li>ol水平レイアウトリスト</li>
+	<li>ol水平レイアウトリスト</li>
+	<li>ol水平レイアウトリスト</li>
+	<li>ol水平レイアウトリスト</li>
+	<li>ol水平レイアウトリスト</li>
+	<li>ol水平レイアウトリスト</li>
+	<li>ol水平レイアウトリスト</li>
+	<li>ol水平レイアウトリスト</li>
+	<li>ol水平レイアウトリスト</li>
+</ol>
+
+<div class="sourcecode"><pre>&lt;ol class=&quot;<strong>horizontal</strong>&quot;&gt;
+    &lt;li&gt;<var>ol水平レイアウトリスト</var>&lt;/li&gt;
+&lt;/ol&gt;
+</pre></div>
+
+<px:back2top />
+
+
+
+
+
+<h2 id="cont_anch_anchorlinks">ページ内リンク</h2>
+
+<div class="anchorlinks">
+	<h2>目次</h2>
+	<ul>
+		<li><a href="#cont_hash1">ページ内リンク1</a></li>
+		<li><a href="#cont_hash2">ページ内リンク2</a></li>
+		<li><a href="#cont_hash3">ページ内リンク3</a>
+			<ul>
+				<li><a href="#cont_hash3_1">ページ内リンク3-1</a></li>
+				<li><a href="#cont_hash3_2">ページ内リンク3-2</a></li>
+			</ul>
+		</li>
+	</ul>
+</div><!-- / .anchorlinks -->
+
+<blockquote class="sourcecode"><pre class="ttr">&lt;div class=&quot;anchorlinks&quot;&gt;
+  &lt;h2&gt;目次&lt;/h2&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;#cont_hash1&quot;&gt;ページ内リンク1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#cont_hash2&quot;&gt;ページ内リンク2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#cont_hash3&quot;&gt;ページ内リンク3&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;#cont_hash3_1&quot;&gt;ページ内リンク3-1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#cont_hash3_2&quot;&gt;ページ内リンク3-2&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;&lt;!-- / .anchorlinks --&gt;
+</pre></blockquote>
+
+
+<px:back2top />
+
+
+
+
+<h2 id="cont_anch_deftable">テーブル</h2>
+
+<h3>通常のテーブル</h3>
+<table class="deftable">
+	<caption>通常のテーブル</caption>
+	<thead>
+		<tr>
+			<th>thead内TH見出し</th>
+			<td>thead内TDセル</td>
+		</tr>
+	</thead>
+	<tfoot>
+		<tr>
+			<th>tfoot内TH見出し</th>
+			<td>tfoot内TDセル</td>
+		</tr>
+	</tfoot>
+	<tbody>
+		<tr>
+			<th>TH見出し</th>
+			<td>TDセル</td>
+		</tr>
+		<tr>
+			<th>TH見出し</th>
+			<td>TDセル</td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="sourcecode"><pre>&lt;table class=&quot;<strong>deftable</strong>&quot;&gt;
+	&lt;caption&gt;通常のテーブル&lt;/caption&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th&gt;thead内TH見出し&lt;/th&gt;
+			&lt;td&gt;thead内TDセル&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tfoot&gt;
+		&lt;tr&gt;
+			&lt;th&gt;tfoot内TH見出し&lt;/th&gt;
+			&lt;td&gt;tfoot内TDセル&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tfoot&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;th&gt;TH見出し&lt;/th&gt;
+			&lt;td&gt;TDセル&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th&gt;TH見出し&lt;/th&gt;
+			&lt;td&gt;TDセル&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+</pre></div>
+
+
+<px:back2top />
+
+
+
+
+
+<a id="cont_anch_float"></a>
+<h2>回り込み</h2>
+
+<p>
+	要素を右に回り込ませるには <code>.FloatR</code>(または<code>.fr</code>) 、左に回りこませるには <code>.FloatL</code>(または<code>.fl</code>) を適用します。
+</p>
+
+<div class="unit">
+	<div class="FloatR">
+		<div><px:img src="sampleimage.gif" alt="" /></div>
+	</div>
+	<p>
+		画像の周りを、テキストが回りこむレイアウトです。画像の周りを、テキストが回りこむレイアウトです。<br />
+	</p>
+</div>
+
+<div class="sourcecode"><pre>&lt;div class=&quot;<strong>FloatR</strong>&quot;&gt;<var>
+	&lt;div&gt;&lt;img src=&quot;sampleimage.gif&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+</var>&lt;/div&gt;<var>
+&lt;p&gt;
+	画像の周りを、テキストが回りこむレイアウトです。画像の周りを、テキストが回りこむレイアウトです。&lt;br /&gt;
+&lt;/p&gt;
+</var></pre></div>
+
+<p>
+	回り込みを次のユニットに影響させたくない場合は、ユニットモジュール <code>div.unit</code> で囲ってください。<br />
+</p>
+
+<div class="sourcecode"><pre>&lt;div class=&quot;<strong>unit</strong>&quot;&gt;
+	&lt;div class=&quot;<strong>FloatR</strong>&quot;&gt;<var>
+		&lt;div&gt;&lt;img src=&quot;sampleimage.gif&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+	</var>&lt;/div&gt;<var>
+	&lt;p&gt;
+		画像の周りを、テキストが回りこむレイアウトです。画像の周りを、テキストが回りこむレイアウトです。&lt;br /&gt;
+	&lt;/p&gt;
+</var>&lt;/div&gt;&lt;!-- /.unit --&gt;
+</pre></div>
+
+
+
+
+
+<px:back2top />
+
+
+
+
+<a id="cont_anch_back2top"></a>
+<h2>ページの先頭へ戻るリンク</h2>
+
+<p>
+	ページの先頭へ戻るリンクは、Pickles Framework のテーマによって生成されます。次のように、&lt;px:back2top&gt;タグを記述してください。<br />
+</p>
+
+<div class="sourcecode"><pre>&lt;px:back2top /&gt;
+</pre></div>
+
+<p>
+	ページの先頭へ戻るリンクは、通常、ページの最下部に1つ、テーマのアウトラインによって配置されます。コンテンツの途中に必要な場合を除いて、コンテンツ上に配置する必要はありません。<br />
+</p>
+
+
+<px:back2top />
+
+
+
+
+<a id="cont_anch_indent"></a>
+<h2>インデント</h2>
+
+<p>
+	<code>.indent</code> は、ブロック全体にインデントを与えます。<br />
+	インデントされる幅の大きさは、メディアタイプによって、あるいはテーマによって、常に固定とは限りません。<br />
+</p>
+
+<div class="indent">
+	<p>ここはインデントされる段落です。</p>
+</div><!-- / .indent -->
+<div class="sourcecode"><pre>&lt;div class=&quot;<strong>indent</strong>&quot;&gt;<var>
+    &lt;p&gt;ここはインデントされる段落です。&lt;/p&gt;
+</var>&lt;/div&gt;&lt;!-- / .indent --&gt;
+</pre></div>
+
+
+<px:back2top />
+
+
+
+
+<h2 id="cont_anch_blockquote">引用</h2>
+
+<blockquote>
+	<p>ここは引用された文字列です。</p>
+	<p>ここは引用された文字列です。</p>
+</blockquote>
+
+<div class="sourcecode"><pre><strong>&lt;blockquote&gt;</strong><var>
+	&lt;p&gt;ここは引用された文字列です。&lt;/p&gt;
+	&lt;p&gt;ここは引用された文字列です。&lt;/p&gt;
+</var><strong>&lt;/blockquote&gt;</strong>
+</pre></div>
+
+<ul class="annotation">
+	<li>※Internet Explorer で上下に余計なマージンが入る場合があります。このときは、 <code>blockquote</code> 内の最初の要素に <code>.mt0</code> を、最後の要素に <code>.mb0</code> を設定してください。</li>
+</ul>
+
+
+<p>
+	インラインで引用する場合は<q>この引用箇所</q>のように、&lt;q&gt;タグを使います。<br />
+</p>
+
+<div class="sourcecode"><pre>&lt;p&gt;
+	インラインで引用する場合は<strong>&lt;q&gt;この引用箇所&lt;/q&gt;</strong>のように、&amp;lt;q&amp;gt;タグを使います。&lt;br /&gt;
+&lt;/p&gt;
+</pre></div>
+
+
+
+<px:back2top />
+
+
+
+<a id="cont_anch_sourcecode"></a>
+<h2>ソースコード</h2>
+
+<div class="sourcecode"><pre>&lt;div class=&quot;<strong>sourcecode</strong>&quot;&gt;&lt;pre&gt;<var>&amp;lt;p&amp;gt;サンプルソースコード&amp;lt;/p&amp;gt;
+</var>&lt;/pre&gt;&lt;/div&gt;
+</pre></div>
+
+<p>このパターンは、コンテンツ領域幅よりも長いソースコードを表現する場合、自動的にスクロールバーが表示されます。ただし、幅が相対指定されているため、IE6ではスクロールバーが出ず、レイアウトを崩す原因になる場合があります。IE6に対応するには、幅を絶対値で固定する必要があります。</p>
+<p>特に引用の意味合いを含む場合は、次の例のようにdiv要素の代わりにblockquote要素を使用します。</p>
+
+<blockquote class="sourcecode"><pre>&lt;<strong>blockquote</strong> class=&quot;sourcecode&quot;&gt;<var>&lt;pre&gt;&amp;lt;p&amp;gt;サンプルソースコード&amp;lt;/p&amp;gt;
+</var>&lt;/pre&gt;&lt;/<strong>blockquote</strong>&gt;</pre></blockquote>
+
+
+<px:back2top />
+
+
+<a id="cont_anch_information"></a>
+<h2>お知らせ欄</h2>
+<div class="information">
+	<h2>お知らせ</h2>
+	<p>
+		お知らせ欄の内側は、見出しや段落から成る、普通のドキュメント形式となります。<br />
+	</p>
+	<p>
+		見出しや段落、リストなど、通常のマークアップを行ってください。<br />
+	</p>
+</div>
+
+<div class="sourcecode"><pre>&lt;div class=&quot;<strong>information</strong>&quot;&gt;<var>
+    &lt;h2&gt;お知らせ&lt;/h2&gt;
+    &lt;p&gt;
+        お知らせ欄の内側は、見出しや段落から成る、普通のドキュメント形式となります。&lt;br /&gt;
+    &lt;/p&gt;
+</var>&lt;/div&gt;
+</pre></div>
+
+<ul class="annotation">
+	<li>※Internet Explorer で上下に余計なマージンが入る場合があります。このときは、 <code>.information</code> 内の最初の要素に <code>.mt0</code> を、最後の要素に <code>.mb0</code> を設定してください。</li>
+</ul>
+
+<px:back2top />
+
+
+<a id="cont_anch_postscript"></a>
+<h2>追記</h2>
+
+<div class="postscript">
+	<p>
+		<span class="date">2009年1月2日</span> ここは追記された内容を説明します。<br />
+	</p>
+</div>
+
+<div class="sourcecode"><pre>&lt;div class=&quot;<strong>postscript</strong>&quot;&gt;
+    &lt;p&gt;
+        &lt;span class=&quot;<strong>date</strong>&quot;&gt;<var>2009年1月2日</var>&lt;/span&gt; <var>ここは追記された内容を説明します。</var>&lt;br /&gt;
+    &lt;/p&gt;
+&lt;/div&gt;
+</pre></div>
+
+<p>
+	複数の記録がある場合は、次のように&lt;ul&gt;タグを用いて一覧化します。<br />
+</p>
+
+<div class="postscript">
+	<ul>
+		<li><span class="date">2009年1月2日</span> ここは追記された内容を説明します。</li>
+		<li><span class="date">2009年1月4日</span> ここは追記された内容を説明します。</li>
+	</ul>
+</div>
+<div class="sourcecode"><pre>&lt;div class=&quot;<strong>postscript</strong>&quot;&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;span class=&quot;<strong>date</strong>&quot;&gt;<var>2009年1月2日</var>&lt;/span&gt; <var>ここは追記された内容を説明します。</var>&lt;/li&gt;
+        &lt;li&gt;&lt;span class=&quot;<strong>date</strong>&quot;&gt;<var>2009年1月4日</var>&lt;/span&gt; <var>ここは追記された内容を説明します。</var>&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</pre></div>
+
+
+<ul class="annotation">
+	<li>※Internet Explorer で上下に余計なマージンが入る場合があります。このときは、 <code>.postscript</code> 内の最初の要素に <code>.mt0</code> を、最後の要素に <code>.mb0</code> を設定してください。</li>
+</ul>
+
+<p>
+	インラインで用いる場合は次のようにします。<br />
+</p>
+<p>
+	ここは、元々書かれていた文字列です。<span class="postscript"><span class="date">2009年1月2日</span> ここは追記された文字列です。</span><br />
+</p>
+
+<div class="sourcecode"><pre><var>&lt;p&gt;
+  ここは、元々書かれていた文字列です。
+  </var>&lt;span class=&quot;<strong>postscript</strong>&quot;&gt;
+    &lt;span class=&quot;<strong>date</strong>&quot;&gt;<var>2009年1月2日</var>&lt;/span&gt; <var>ここは追記された文字列です。
+  </var>&lt;/span&gt;<var>
+  &lt;br /&gt;
+&lt;/p&gt;
+</var></pre></div>
+
+
+<px:back2top />
+
+
+
+<a id="cont_anch_haribotekit"></a>
+<h2>はりぼてキット (画像置換)</h2>
+
+<p>
+	はりぼてキットは、画像表示がオフの環境にも対応できる画像置換のパーツモジュールです。<br />
+</p>
+<p>
+	<code>.haribotekit</code> (別名 <code>.imagereplace</code> も可)と、その内側に配置される空span要素 <code>.haribotekit .panel</code> とで構成されます。<code>.haribotekit</code>内のテキストを <code>.panel</code> に指定した背景画像が覆い隠すことで実現する画像置換のため、画像に透過GIFや半透過PNGは使わないでください。<br />
+</p>
+<p>
+	<code>.haribotekit</code> に、置換画像の高さ(<code>width</code>)と幅(<code>height</code>) を、<code>.panel</code> に、背景画像として置換画像のパス(<code>background-image</code>) を付加して使用します。<br />
+</p>
+<p>
+	<code>.panel</code> には、必要に応じて <code>background-position</code> や <code>background-repeat</code> を指定することもできます。<br />
+</p>
+
+<p>
+	次に示すのは、ハイパーリンクを画像で置き換える実装例です。<br />
+</p>
+<px:style type="text/css">
+	a.cont_sample{
+		width:120px; height:80px;
+	}
+	a.cont_sample span.panel{
+		background-image:url("sampleimage.gif");
+	}
+</px:style>
+<ul class="none">
+	<li><a href="#" class="haribotekit cont_sample">リンクラベル<span class="panel"></span></a></li>
+</ul>
+
+<div class="sourcecode"><pre>&lt;style type=&quot;text/css&quot;&gt;
+	a.cont_sample{
+		<strong>width:120px;</strong> <strong>height:80px;</strong>
+	}
+	a.cont_sample span.panel{
+		<strong>background-image:url(&quot;sampleimage.gif&quot;);</strong>
+	}
+&lt;/style&gt;
+&lt;<var>a</var> href=&quot;****&quot; class=&quot;<strong>haribotekit</strong> cont_sample&quot;&gt;
+	<var>リンクラベル</var>&lt;span class=&quot;<strong>panel</strong>&quot;&gt;&lt;/span&gt;
+&lt;/<var>a</var>&gt;
+</pre></div>
+
+
+<px:back2top />
+
+
+
+<a id="cont_anch_forms"></a>
+<h2>フォーム</h2>
+
+<ul class="annotation">
+	<li>※このフォームは、コーディングのサンプルを示すために置かれたもので、ダミーです。送信しても何も起こりません。</li>
+</ul>
+<p>
+	Pickles Framework の標準スタイルシートでは、&lt;form&gt;要素はインライン要素に指定されており、レイアウトに影響しません。<span class="must">*必須</span>印は必須項目を表わしています。<br />
+</p>
+
+<form action="#" method="post">
+<table class="deftable" width="100%">
+	<tr>
+		<th style="width:30%;"><div>項目名</div></th>
+		<td style="width:70%;"><div><input type="text" name="sample" value="" class="inputitems" /></div></td>
+	</tr>
+</table>
+<blockquote class="sourcecode"><pre>&lt;table class=&quot;deftable&quot; width=&quot;100%&quot;&gt;
+	&lt;tr&gt;
+		&lt;th style=&quot;width:30%;&quot;&gt;&lt;div&gt;項目名&lt;/div&gt;&lt;/th&gt;
+		&lt;td style=&quot;width:70%;&quot;&gt;&lt;div&gt;&lt;input type=&quot;text&quot; name=&quot;sample&quot; value=&quot;&quot; class=&quot;inputitems&quot; /&gt;&lt;/div&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</pre></blockquote>
+<table class="deftable" width="100%">
+	<tr>
+		<th style="width:30%;"><div>必須入力項目 <span class="must">*必須</span></div></th>
+		<td style="width:70%;">
+			<div class="ttrs notes">70%幅の入力項目を作成しています。</div>
+			<div><input type="text" name="sample" value="" class="inputitems70" /></div>
+		</td>
+	</tr>
+	<tr>
+		<th style="width:30%;"><div>必須入力項目 <span class="must">*必須</span></div></th>
+		<td style="width:70%;">
+			<div class="ttrs notes">30%幅の入力項目を作成しています。</div>
+			<div><input type="text" name="sample" value="" class="inputitems30" /></div>
+		</td>
+	</tr>
+</table>
+<blockquote class="sourcecode"><pre>&lt;table class=&quot;deftable&quot; width=&quot;100%&quot;&gt;
+	&lt;tr&gt;
+		&lt;th style=&quot;width:30%;&quot;&gt;&lt;div&gt;必須入力項目 &lt;span class=&quot;must&quot;&gt;*必須&lt;/span&gt;&lt;/div&gt;&lt;/th&gt;
+		&lt;td style=&quot;width:70%;&quot;&gt;
+			&lt;div class=&quot;ttrs notes&quot;&gt;70%幅の入力項目を作成しています。&lt;/div&gt;
+			&lt;div&gt;&lt;input type=&quot;text&quot; name=&quot;sample&quot; value=&quot;&quot; class=&quot;inputitems70&quot; /&gt;&lt;/div&gt;
+		&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;th style=&quot;width:30%;&quot;&gt;&lt;div&gt;必須入力項目 &lt;span class=&quot;must&quot;&gt;*必須&lt;/span&gt;&lt;/div&gt;&lt;/th&gt;
+		&lt;td style=&quot;width:70%;&quot;&gt;
+			&lt;div class=&quot;ttrs notes&quot;&gt;30%幅の入力項目を作成しています。&lt;/div&gt;
+			&lt;div&gt;&lt;input type=&quot;text&quot; name=&quot;sample&quot; value=&quot;&quot; class=&quot;inputitems30&quot; /&gt;&lt;/div&gt;
+		&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</pre></blockquote>
+<table class="deftable" width="100%">
+	<tr>
+		<th style="width:30%;"><div>複数行テキスト</div></th>
+		<td style="width:70%;">
+			<div class="ttrs notes">幅はスタイルシートで指定されていますが、高さはrows属性にゆだねます。</div>
+			<div><textarea name="sample" cols="20" rows="6" class="inputitems"></textarea></div>
+		</td>
+	</tr>
+</table>
+<blockquote class="sourcecode"><pre>&lt;table class=&quot;deftable&quot; width=&quot;100%&quot;&gt;
+	&lt;tr&gt;
+		&lt;th style=&quot;width:30%;&quot;&gt;&lt;div&gt;複数行テキスト&lt;/div&gt;&lt;/th&gt;
+		&lt;td style=&quot;width:70%;&quot;&gt;
+			&lt;div class=&quot;ttrs notes&quot;&gt;幅はスタイルシートで指定されていますが、高さはrows属性にゆだねます。&lt;/div&gt;
+			&lt;div&gt;&lt;textarea name=&quot;sample&quot; cols=&quot;20&quot; rows=&quot;6&quot; class=&quot;inputitems&quot;&gt;&lt;/textarea&gt;&lt;/div&gt;
+		&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</pre></blockquote>
+<table class="deftable" width="100%">
+	<tr>
+		<th style="width:30%;"><div>ラジオボタン</div></th>
+		<td style="width:70%;">
+			<ul class="none">
+				<li><label><input type="radio" name="sample_radio" value="0" checked="checked" />ラジオボタン0</label></li>
+				<li><label><input type="radio" name="sample_radio" value="1" />ラジオボタン1</label></li>
+				<li><label><input type="radio" name="sample_radio" value="2" />ラジオボタン2</label></li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th style="width:30%;"><div>チェックボックス</div></th>
+		<td style="width:70%;">
+			<ul class="none">
+				<li><label><input type="checkbox" name="sample_checkbox_0" value="0" checked="checked" />チェックボックス0</label></li>
+				<li><label><input type="checkbox" name="sample_checkbox_1" value="1" />チェックボックス1</label></li>
+				<li><label><input type="checkbox" name="sample_checkbox_2" value="2" />チェックボックス2</label></li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th style="width:30%;"><div>プルダウン</div></th>
+		<td style="width:70%;">
+			<div>
+				<select name="selectmenu">
+					<option value="">選択してください。</option>
+					<option value="1">選択肢1</option>
+					<option value="2">選択肢2</option>
+					<option value="3">選択肢3</option>
+					<option value="4">選択肢4</option>
+				</select>
+			</div>
+		</td>
+	</tr>
+</table>
+<blockquote class="sourcecode"><pre>&lt;table class=&quot;deftable&quot; width=&quot;100%&quot;&gt;
+	&lt;tr&gt;
+		&lt;th style=&quot;width:30%;&quot;&gt;&lt;div&gt;ラジオボタン&lt;/div&gt;&lt;/th&gt;
+		&lt;td style=&quot;width:70%;&quot;&gt;
+			&lt;ul class=&quot;none&quot;&gt;
+				&lt;li&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;sample_radio&quot; value=&quot;0&quot; checked=&quot;checked&quot; /&gt;ラジオボタン0&lt;/label&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;sample_radio&quot; value=&quot;1&quot; /&gt;ラジオボタン1&lt;/label&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;sample_radio&quot; value=&quot;2&quot; /&gt;ラジオボタン2&lt;/label&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;th style=&quot;width:30%;&quot;&gt;&lt;div&gt;チェックボックス&lt;/div&gt;&lt;/th&gt;
+		&lt;td style=&quot;width:70%;&quot;&gt;
+			&lt;ul class=&quot;none&quot;&gt;
+				&lt;li&gt;&lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;sample_checkbox_0&quot; value=&quot;0&quot; checked=&quot;checked&quot; /&gt;チェックボックス0&lt;/label&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;sample_checkbox_1&quot; value=&quot;1&quot; /&gt;チェックボックス1&lt;/label&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;label&gt;&lt;input type=&quot;checkbox&quot; name=&quot;sample_checkbox_2&quot; value=&quot;2&quot; /&gt;チェックボックス2&lt;/label&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;th style=&quot;width:30%;&quot;&gt;&lt;div&gt;プルダウン&lt;/div&gt;&lt;/th&gt;
+		&lt;td style=&quot;width:70%;&quot;&gt;
+			&lt;div&gt;
+				&lt;select name=&quot;selectmenu&quot;&gt;
+					&lt;option value=&quot;&quot;&gt;選択してください。&lt;/option&gt;
+					&lt;option value=&quot;1&quot;&gt;選択肢1&lt;/option&gt;
+					&lt;option value=&quot;2&quot;&gt;選択肢2&lt;/option&gt;
+					&lt;option value=&quot;3&quot;&gt;選択肢3&lt;/option&gt;
+					&lt;option value=&quot;4&quot;&gt;選択肢4&lt;/option&gt;
+				&lt;/select&gt;
+			&lt;/div&gt;
+		&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</pre></blockquote>
+<table class="deftable" width="100%">
+	<tr class="error">
+		<th style="width:30%;"><div>エラー表示 <span class="must">*必須</span></div></th>
+		<td style="width:70%;">
+			<div class="error">「エラー表示」は必須項目です。必ず入力してください。</div>
+			<div class="ttrs notes">幅はスタイルシートで指定されていますが、高さはrows属性にゆだねます。</div>
+			<div><textarea name="sample" cols="20" rows="6" class="inputitems"></textarea></div>
+		</td>
+	</tr>
+</table>
+<blockquote class="sourcecode"><pre>&lt;table class=&quot;deftable&quot; width=&quot;100%&quot;&gt;
+	&lt;tr class=&quot;<strong>error</strong>&quot;&gt;
+		&lt;th style=&quot;width:30%;&quot;&gt;&lt;div&gt;エラー表示 &lt;span class=&quot;must&quot;&gt;*必須&lt;/span&gt;&lt;/div&gt;&lt;/th&gt;
+		&lt;td style=&quot;width:70%;&quot;&gt;
+			&lt;div class=&quot;<strong>error</strong>&quot;&gt;「エラー表示」は必須項目です。必ず入力してください。&lt;/div&gt;
+			&lt;div class=&quot;ttrs notes&quot;&gt;幅はスタイルシートで指定されていますが、高さはrows属性にゆだねます。&lt;/div&gt;
+			&lt;div&gt;&lt;textarea name=&quot;sample&quot; cols=&quot;20&quot; rows=&quot;6&quot; class=&quot;inputitems&quot;&gt;&lt;/textarea&gt;&lt;/div&gt;
+		&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</pre></blockquote>
+<p class="AlignC"><input type="submit" value="送信する" /></p>
+</form>
+<hr />
+<form action="#" method="post">
+	<p class="AlignC"><input type="submit" value="キャンセル" /></p>
+</form>
+
+<blockquote class="sourcecode"><pre>&lt;form action=&quot;<var>****</var>&quot; method=&quot;post&quot;&gt;
+  <var>&lt;!-- ★ここにフォームの本体が入ります★ --&gt;</var>
+  &lt;p class=&quot;AlignC&quot;&gt;&lt;input type=&quot;submit&quot; value=&quot;<var>送信する</var>&quot; /&gt;&lt;/p&gt;
+&lt;/form&gt;
+&lt;hr /&gt;
+&lt;form action=&quot;<var>****</var>&quot; method=&quot;post&quot;&gt;
+ &lt;p class=&quot;AlignC&quot;&gt;&lt;input type=&quot;submit&quot; value=&quot;キャンセル&quot; /&gt;&lt;/p&gt;
+&lt;/form&gt;
+</pre></blockquote>
+
+

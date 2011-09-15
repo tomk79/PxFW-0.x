@@ -1,0 +1,625 @@
+@charset "UTF-8";
+
+	/* ************************************** メインレイアウト ************************************** */
+
+	/* -------------------------------------- レイアウト全体の輪郭 -------------------------------------- */
+	#outline{
+		display:block;
+		width:auto;
+		clear:both;
+		padding:0px 0px 0px 0px;
+		margin:0px auto 0px auto;
+		text-align:left;
+	}
+	@media handheld{
+		#outline{
+			display:block;
+			width:auto;
+			clear:both;
+			padding:0px 0px 0px 0px;
+			margin:0px auto 0px auto;
+			text-align:left;
+		}
+	}
+	@media print{
+		#outline{
+			display:block;
+			width:auto;
+			clear:both;
+			padding:0px 0px 0px 0px;
+			margin:0px auto 0px auto;
+			text-align:left;
+		}
+	}
+	@media tv{
+		#outline{
+			display:block;
+			width:auto;
+			clear:both;
+			padding:0px 0px 0px 0px;
+			margin:0px auto 0px auto;
+			text-align:left;
+		}
+	}
+
+	/* -------------------------------------- 上中下段ブロック -------------------------------------- */
+	#blockTop{
+		display:block;
+		width:auto;
+		clear:both;
+		padding:0px 0px 0px 0px;
+		margin:0px 0px 0px 0px;
+		text-align:left;
+	}
+
+	#blockTop .globalmenu{
+		display:block;
+		width:auto;
+		float:none;
+		clear:both;
+		zoom:100%;
+	}
+	#blockTop .globalmenu:after{/*clearfix*/
+		content: " ";
+		display:block;
+		visibility:hidden;
+		height:0.1px;
+		font-size:0.1em;
+		line-height:0px;
+		clear:both;
+	}
+	#blockTop .globalmenu ul,
+	#blockTop .shouldermenu ul,
+	#blockBottom .globalmenu ul,
+	#blockBottom .shouldermenu ul{
+		display:block;
+		margin:0px 0px 5px 0px;
+		padding:0px;
+		clear:both;
+	}
+	#blockTop .globalmenu ul li,
+	#blockTop .shouldermenu ul li,
+	#blockBottom .globalmenu ul li,
+	#blockBottom .shouldermenu ul li{
+		padding:0px;
+		list-style:none;
+		float:left;
+		margin-right:7px;
+		margin-bottom:0px;
+		white-space:nowrap;
+	}
+	#blockTop .globalmenu ul{
+		width:100%;
+	}
+	#blockTop .shouldermenu{
+		position:absolute;
+		top:0px;
+		right:0px;
+	}
+	#blockMiddle{
+		display:block;
+		width:auto;
+		clear:both;
+		padding:0px 0px 0px 0px;
+		margin:0px 0px 0px 0px;
+		text-align:left;
+		zoom:100%;
+	}
+	#blockMiddle:after{
+		content: " ";
+		display:block;
+		visibility:hidden;
+		height:0.1px;
+		font-size:0.1em;
+		line-height:0px;
+		clear:both;
+	}
+	#blockBottom{
+		display:block;
+		width:auto;
+		clear:both;
+		padding:0px 0px 0px 0px;
+		margin:0px 0px 0px 0px;
+		text-align:left;
+	}
+	#blockBottom .copyright{
+		clear:both;
+		text-align:center;
+		font-style:normal;
+	}
+
+	#main{
+		display:block;
+		float:left;
+		width:73%;
+		padding:0px 0px 0px 0px;
+		margin:0px 0px 12px 0px;
+		text-align:left;
+	}
+
+	@media handheld{
+		#blockTop{
+			display:block;
+			width:auto;
+			clear:both;
+			padding:0px 0px 0px 0px;
+			margin:0px 0px 0px 0px;
+			text-align:left;
+		}
+
+		#blockTop .globalmenu{
+			display:block;
+			width:auto;
+			float:none;
+			clear:both;
+			zoom:100%;
+		}
+		#blockTop .globalmenu:after{/*clearfix*/
+			content: " ";
+			display:block;
+			visibility:hidden;
+			height:0.1px;
+			font-size:0.1em;
+			line-height:0px;
+			clear:both;
+		}
+		#blockTop .globalmenu{
+			display:none;
+		}
+		#blockTop .shouldermenu{
+			display:none;
+		}
+		#blockTop .globalmenu ul,
+		#blockTop .shouldermenu ul,
+		#blockBottom .globalmenu ul,
+		#blockBottom .shouldermenu ul{
+			display:block;
+			margin:0px 0px 5px 0px;
+			padding:0px;
+			clear:both;
+		}
+		#blockTop .globalmenu ul li,
+		#blockTop .shouldermenu ul li,
+		#blockBottom .globalmenu ul li,
+		#blockBottom .shouldermenu ul li{
+			padding:0px;
+			list-style:none;
+			float:left;
+			margin-right:7px;
+			margin-bottom:0px;
+			white-space:nowrap;
+		}
+		#blockTop .globalmenu ul{
+			width:100%;
+		}
+		#blockTop .shouldermenu{
+			position:absolute;
+			top:0px;
+			right:0px;
+		}
+		#blockMiddle{
+			display:block;
+			width:auto;
+			clear:both;
+			padding:0px 0px 0px 0px;
+			margin:0px 0px 0px 0px;
+			text-align:left;
+		}
+		#blockBottom{
+			display:block;
+			width:auto;
+			clear:both;
+			padding:0px 0px 0px 0px;
+			margin:0px 0px 0px 0px;
+			text-align:left;
+		}
+		#blockBottom .copyright{
+			clear:both;
+			text-align:center;
+			font-style:normal;
+		}
+
+		/* 左右サイドバー */
+		#sidebarLeft{
+			display:none;
+		}
+		#sidebarRight{
+			display:block;
+			width:auto;
+			clear:both;
+			float:none;
+			border-top:1px solid #333333;
+			padding:3px 10px 24px 10px;
+		}
+		#sidebarRight .link2parentpage{
+			font-size: 85%;
+		}
+		#sidebarRight .link2parentpage a{
+			display:block;
+			padding:2px;
+		}
+
+		/* メインエリア */
+		#main{
+			display:block;
+			clear:both;
+			float:none;
+			width:auto;
+			padding:0px 0px 0px 0px;
+			margin:0px 0px 12px 0px;
+			text-align:left;
+		}
+	}
+	@media print{
+		#blockTop{
+			display:block;
+			width:auto;
+			clear:both;
+			padding:0px 0px 0px 0px;
+			margin:0px 0px 0px 0px;
+			text-align:left;
+		}
+		#blockTop .globalmenu ul,
+		#blockTop .shouldermenu ul,
+		#blockBottom .globalmenu ul,
+		#blockBottom .shouldermenu ul{
+			display:block;
+			margin:0px 0px 5px 0px;
+			padding:0px;
+			clear:both;
+		}
+		#blockTop .globalmenu ul li,
+		#blockTop .shouldermenu ul li,
+		#blockBottom .globalmenu ul li,
+		#blockBottom .shouldermenu ul li{
+			padding:0px;
+			list-style:none;
+			float:left;
+			margin-right:7px;
+			margin-bottom:0px;
+			white-space:nowrap;
+		}
+		#blockTop .globalmenu ul{
+			width:100%;
+		}
+		#blockTop .shouldermenu{
+			position:absolute;
+			top:0px;
+			right:0px;
+		}
+		#blockMiddle{
+			display:block;
+			width:auto;
+			clear:both;
+			padding:0px 0px 0px 0px;
+			margin:0px 0px 0px 0px;
+			text-align:left;
+		}
+		#blockBottom{
+			display:block;
+			width:auto;
+			clear:both;
+			padding:0px 0px 0px 0px;
+			margin:0px 0px 0px 0px;
+			text-align:left;
+		}
+		#blockBottom .copyright{
+			clear:both;
+			text-align:center;
+			font-style:normal;
+		}
+
+		/* 左右サイドバー */
+		#sidebarLeft{
+			display:block;
+			float:left;
+			width:0%;
+			text-align:left;
+			padding:0px 0px 0px 0px;
+		}
+		#sidebarRight{
+			display:block;
+			float:right;
+			width:27%;
+			text-align:left;
+			padding:0px 0px 0px 0px;
+		}
+		#sidebarRight .link2parentpage{
+			font-size: 85%;
+		}
+		#sidebarRight .link2parentpage a{
+			display:block;
+			padding:2px;
+		}
+
+		/* ====================================== グローバルナビ ====================================== */
+
+		#blockTop .globalmenu{
+			display:block;
+			width:auto;
+			float:none;
+			clear:both;
+			zoom:100%;
+		}
+		#blockTop .globalmenu:after{/*clearfix*/
+			content: " ";
+			display:block;
+			visibility:hidden;
+			height:0.1px;
+			font-size:0.1em;
+			line-height:0px;
+			clear:both;
+		}
+
+		/* ====================================== 基本レイアウト要素 ====================================== */
+		#blockTop .globalmenu		{display:none; }
+		#blockTop .shouldermenu		{display:none; }
+		#blockBottom .globalmenu	{display:none; }
+		#blockBottom .shouldermenu	{display:none; }
+		#sidebarLeft				{display:none; }
+		#sidebarRight				{display:none; }
+
+		/* メインエリア */
+		#main{
+			display:block;
+			padding:0px 0px 0px 0px;
+			margin:0px 0px 12px 0px;
+			text-align:left;
+			width:auto;
+			float:none;
+			clear:both;
+		}
+	}
+	@media tv{
+		#blockTop{
+			display:block;
+			width:auto;
+			clear:both;
+			padding:0px 0px 0px 0px;
+			margin:0px 0px 0px 0px;
+			text-align:left;
+		}
+		#blockTop .globalmenu{
+			display:block;
+			width:auto;
+			float:none;
+			clear:both;
+			zoom:100%;
+		}
+		#blockTop .globalmenu:after{/*clearfix*/
+			content: " ";
+			display:block;
+			visibility:hidden;
+			height:0.1px;
+			font-size:0.1em;
+			line-height:0px;
+			clear:both;
+		}
+		#blockTop .globalmenu ul,
+		#blockTop .shouldermenu ul,
+		#blockBottom .globalmenu ul,
+		#blockBottom .shouldermenu ul{
+			display:block;
+			margin:0px 0px 5px 0px;
+			padding:0px;
+			clear:both;
+		}
+		#blockTop .globalmenu ul li,
+		#blockTop .shouldermenu ul li,
+		#blockBottom .globalmenu ul li,
+		#blockBottom .shouldermenu ul li{
+			padding:0px;
+			list-style:none;
+			float:left;
+			margin-right:7px;
+			margin-bottom:0px;
+			white-space:nowrap;
+		}
+		#blockTop .globalmenu ul{
+			width:100%;
+		}
+		#blockTop .shouldermenu{
+			position:absolute;
+			top:0px;
+			right:0px;
+		}
+		#blockMiddle{
+			display:block;
+			width:auto;
+			clear:both;
+			padding:0px 0px 0px 0px;
+			margin:0px 0px 0px 0px;
+			text-align:left;
+		}
+		#blockBottom{
+			display:block;
+			width:auto;
+			clear:both;
+			padding:0px 0px 0px 0px;
+			margin:0px 0px 0px 0px;
+			text-align:left;
+		}
+		#blockBottom .copyright{
+			clear:both;
+			text-align:center;
+			font-style:normal;
+		}
+
+		/* 左右サイドバー */
+		#sidebarLeft{
+			display:block;
+			float:left;
+			width:0%;
+			text-align:left;
+			padding:0px 0px 0px 0px;
+		}
+		#sidebarRight{
+			display:block;
+			float:right;
+			width:27%;
+			text-align:left;
+			padding:0px 0px 0px 0px;
+		}
+		#sidebarRight .link2parentpage{
+			font-size: 85%;
+		}
+		#sidebarRight .link2parentpage a{
+			display:block;
+			padding:2px;
+		}
+		#main{
+			display:block;
+			float:left; width:73%;
+			padding:0px 0px 0px 0px;
+			margin:0px 0px 12px 0px;
+			text-align:left;
+		}
+	}
+
+	/* -------------------------------------- コンテンツエリア -------------------------------------- */
+	#content{
+		display:block;
+		width:auto;
+		text-align:left;
+		margin:0px 10px 10px 10px;
+		padding:0px 0px 0px 0px !important;
+		border:0px !important;
+	}
+	@media handheld{
+		#content{
+			display:block;
+			width:auto;
+			text-align:left;
+			margin:0px 10px 10px 10px;
+		}
+	}
+	@media print{
+		#content{
+			display:block;
+			width:auto;
+			text-align:left;
+			margin:0px 10px 10px 10px;
+		}
+	}
+	@media tv{
+		#content{
+			display:block;
+			width:auto;
+			text-align:left;
+			margin:0px 10px 10px 10px;
+		}
+	}
+
+	/* -------------------------------------- 左右サイドバー -------------------------------------- */
+	#sidebarLeft{
+		display:none;
+		float:left;
+		width:0%;
+		text-align:left;
+		padding:0px 0px 0px 0px;
+	}
+	#sidebarRight{
+		display:block;
+		float:right;
+		width:27%;
+		text-align:left;
+		padding:0px 0px 0px 0px;
+	}
+	#sidebarRight .link2parentpage{
+		font-size: 85%;
+	}
+	#sidebarRight .link2parentpage a{
+		display:block;
+		padding:2px;
+	}
+
+	/* -------------------------------------- ロゴ(CI) -------------------------------------- */
+	#logo{
+		display:block;
+		width:auto;
+		font-size:123%;
+		font-weight:bold;
+		padding:5px;
+	}
+	@media handheld{
+		/* ロゴ(CI) */
+		#logo{
+			display:block;
+			width:auto;
+			font-weight:bold;
+			padding:5px;
+		}
+	}
+	@media print{
+		#logo{
+			display:block;
+			width:auto;
+			font-weight:bold;
+			padding:5px;
+		}
+	}
+	@media tv{
+		#logo{
+			display:block;
+			width:auto;
+			font-weight:bold;
+			padding:5px;
+		}
+	}
+
+	/* -------------------------------------- パン屑 -------------------------------------- */
+	div.breadcrumb{
+		clear:both;
+		font-size: 85%;
+		padding:2px 5px 2px 5px;
+	}
+	div.breadcrumb ul ,
+	div.breadcrumb li {
+		display:inline;
+		margin:0px;
+		padding:0px;
+	}
+
+	/* -------------------------------------- ページタイトル -------------------------------------- */
+	#ptitle{
+		display:block;
+		width:auto;
+		text-align:left;
+		margin:0px 10px 5px 0px;
+		padding:10px 10px 5px 10px;
+	}
+	#ptitle h1{
+		font-size:138%;/*18px相当*/
+		margin:0px;
+	}
+	#ptitle p{
+		margin:0px;
+	}
+	@media handheld{
+		#ptitle{
+			display:block;
+			width:auto;
+			text-align:left;
+			margin:0px 0px 5px 0px;
+			padding:10px 10px 5px 10px;
+		}
+	}
+	@media print{
+		#ptitle{
+			display:block;
+			width:auto;
+			text-align:left;
+			margin:0px 0px 5px 0px;
+			padding:10px 10px 5px 10px;
+		}
+	}
+	@media tv{
+		#ptitle{
+			display:block;
+			width:auto;
+			text-align:left;
+			margin:0px 0px 5px 0px;
+			padding:10px 10px 5px 10px;
+		}
+	}
+

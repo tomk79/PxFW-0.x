@@ -1,0 +1,42 @@
+@charset "UTF-8";
+@media print{
+/*----------------------------------------------------------------------------
+Pickles CSS (for Print)
+version 0.4.3
+Last Update: 2:00 2011/01/26
+(C)Tomoya Koyanagi.
+http://pickles.pxt.jp/
+----------------------------------------------------------------------------*/
+
+	/* ************************************** 基本設定(リセット) ************************************** */
+
+	/* 基本文字サイズ */
+	body,input,textarea,select,option,button{
+		font-size:medium;
+	}
+
+ 	/* ************************************** Static Module ************************************** */
+
+	/* (nothing) */
+
+	/* ************************************** Parts Module ************************************** */
+
+	/* -------------------------------------- ソースコード -------------------------------------- */
+	blockquote.sourcecode,
+	div.sourcecode{
+		overflow:auto;
+	}
+	blockquote.sourcecode pre,
+	div.sourcecode pre{
+		white-space:-moz-pre-wrap;
+		white-space:-pre-wrap;
+		white-space:-o-pre-wrap;
+		white-space:pre-wrap;
+		word-wrap:break-word;
+	}
+
+	/* ************************************** Unit Module ************************************** */
+
+	/* (nothing) */
+
+}

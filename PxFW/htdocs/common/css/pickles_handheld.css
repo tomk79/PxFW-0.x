@@ -1,0 +1,95 @@
+@charset "UTF-8";
+@media handheld{
+/*----------------------------------------------------------------------------
+Pickles CSS (for Handheld)
+version 0.4.3
+Last Update: 2:00 2011/01/26
+(C)Tomoya Koyanagi.
+http://pickles.pxt.jp/
+----------------------------------------------------------------------------*/
+
+	/* ************************************** 基本設定(リセット) ************************************** */
+
+	/* 基本文字サイズ */
+	body,input,textarea,select,option,button{
+		font-size:medium;
+	}
+	/* 自動折り返し */
+	pre{
+		white-space:-moz-pre-wrap;
+		white-space:-pre-wrap;
+		white-space:-o-pre-wrap;
+		white-space:pre-wrap;
+		word-wrap:break-word;
+	}
+
+ 	/* ************************************** Static Module ************************************** */
+
+	/* (nothing) */
+
+	/* ************************************** Parts Module ************************************** */
+
+	/* -------------------------------------- ソースコード -------------------------------------- */
+	blockquote.sourcecode ,
+	div.sourcecode {
+		overflow:auto;
+	}
+	blockquote.sourcecode pre ,
+	div.sourcecode pre {
+		white-space:-moz-pre-wrap;
+		white-space:-pre-wrap;
+		white-space:-o-pre-wrap;
+		white-space:pre-wrap;
+		word-wrap:break-word;
+	}
+
+	/* ************************************** Unit Module ************************************** */
+	/* 規則：Unit Module のコンテナはdiv要素でなければならない。 */
+
+	/* -------------------------------------- ペイン(カラム)分割ユニット -------------------------------------- */
+	/* 左右複数等分のペイン */
+	/* handheld では、横に並べず、縦に整列する。 */
+	div.paneBlock  ,
+	div.unit_pane2 ,
+	div.unit_pane3 ,
+	div.unit_pane4 ,
+	div.unit_pane5 {
+	}
+	div.unit_pane2 div.pane2L  ,
+	div.unit_pane2 div.pane2R  ,
+	div.unit_pane3 div.pane3L  ,
+	div.unit_pane3 div.pane3C  ,
+	div.unit_pane3 div.pane3R  ,
+	div.unit_pane4 div.pane4L2 ,
+	div.unit_pane4 div.pane4L1 ,
+	div.unit_pane4 div.pane4R1 ,
+	div.unit_pane4 div.pane4R2 ,
+	div.unit_pane5 div.pane5L2 ,
+	div.unit_pane5 div.pane5L1 ,
+	div.unit_pane5 div.pane5C  ,
+	div.unit_pane5 div.pane5R1 ,
+	div.unit_pane5 div.pane5R2 ,
+	div.unit_pane2 div.pane    ,
+	div.unit_pane3 div.pane    ,
+	div.unit_pane4 div.pane    ,
+	div.unit_pane5 div.pane    {
+		clear:both;
+		float:none;
+		display:block;
+		width:auto;
+		border:none;
+		padding:0px 0px 0px 0px;
+		margin:1em 0px 1.5em 0px;
+	}
+
+
+	/* -------------------------------------- サムネイル付きリストユニット -------------------------------------- */
+	div.unit_thumblist ul li{
+		margin:1em 0px 1em 0px;
+	}
+	div.unit_thumblist ul li div.unit_thumblistText{
+		overflow:visible;
+		margin-left:0px;
+	}
+
+}

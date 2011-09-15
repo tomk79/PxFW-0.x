@@ -1,0 +1,406 @@
+
+<ul>
+	<li>ユニットモジュールのコンテナは、必ずdiv要素で、水平貫通の矩形ブロックとしてレイアウトされます。</li>
+	<li>ユニットモジュールの上下には、標準的なマージンが空くように設計されます。</li>
+	<li>ユニットモジュールは、特に記載のない限り、他のユニットモジュールやパーツモジュールと組み合わせて使うことはできません。</li>
+	<li>ユニットモジュールの名称は、プレフィックス <code>unit_</code> から始まります(汎用ユニット <code>.unit</code> のみ例外)。コンテンツが独自にユニットモジュールを定義する場合のプレフィックスは、<code>cont_unit_</code> です。</li>
+</ul>
+
+<div class="unit">
+<div class="anchorlinks">
+	<h2>目次</h2>
+	<ul>
+		<li><a href="#cont_anch_unit">汎用ユニット</a></li>
+		<li><a href="#cont_anch_unit_pane">ペイン(カラム)分割ユニット</a></li>
+		<li><a href="#cont_anch_unit_thumblist">サムネイル付きリストユニット</a></li>
+		<li><a href="#cont_anch_unit_pager">ページャーユニット</a></li>
+	</ul>
+</div><!-- /.anchorlinks -->
+</div><!-- /.unit -->
+
+
+
+<a id="cont_anch_unit"></a>
+<h2>汎用ユニット</h2>
+
+<div class="unit">
+	<p><code>div.unit</code> はプレーンなユニットです。</p>
+</div><!-- /.unit -->
+
+<div class="sourcecode"><pre>&lt;div class=&quot;<strong>unit</strong>&quot;&gt;
+  <var>&lt;p&gt;&lt;code&gt;div.unit&lt;/code&gt; はタダのユニットです。&lt;/p&gt;</var>
+&lt;/div&gt;&lt;!-- /.unit --&gt;
+</pre></div>
+
+<p>
+	<code>div.unit</code> で囲われた領域は、プレーンなユニットとして定義され、シンプルな矩形エリアとして扱われます。<br />
+	<code>div.unit</code> 内には、任意の複数のパーツモジュールを組み込んで使用することができます。<br />
+	<code>div.unit</code> の上下には標準的なマージンが設定され、最初の子要素の <code>margin-top</code> および最後の子要素の <code>margin-bottom</code> は 0px にセットされます。<br />
+</p>
+
+<h3>div.unit の拡張</h3>
+<p>
+	<code>div.unit</code> が提供する機能は、ユニットモジュールの最低限のスタイル設定(上下のマージン、矩形維持)のみです。この性質を利用するために、新しいカスタムユニットは <code>div.unit</code> を拡張して実装することができます。<br />
+	下記はその例です。<br />
+</p>
+
+<blockquote class="sourcecode"><pre class="ttr">&lt;style type=&quot;text/css&quot;&gt;
+/* .cont_unit_sample */
+#content .cont_unit_sample{
+}
+/* / .cont_unit_sample */
+&lt;/style&gt;
+
+&lt;div class=&quot;unit cont_unit_sample&quot;&gt;
+	&lt;p&gt;カスタムユニットの実装例&lt;/p&gt;
+&lt;/div&gt;
+</pre></blockquote>
+
+<p>
+	この例は、<code>div.unit</code> と、カスタムユニットモジュールの <code>.cont_unit_sample</code> の両方をクラスに指定しています。<code>.cont_unit_sample</code> は、<code>div.unit</code> の性質を引き継ぎます。<br />
+</p>
+
+<p>
+</p>
+
+<px:back2top />
+
+
+
+<a id="cont_anch_unit_pane"></a>
+<h2>ペイン(カラム)分割ユニット</h2>
+<p>
+	ペイン分割ユニットは、複数のペインにユニットを均等分割します。<br />
+	ただし、handheldなどの画面が小さいデバイスに対しては、通常通り縦のリキッドレイアウトが提供されます。<br />
+</p>
+<p>
+	分割されたそれぞれのペイン(例えば <code>.pane2L</code>, <code>.pane2R</code>, <code>.pane3L</code>, <code>.pane4L2</code>, <code>.pane5L2</code> など)内には、任意の複数のパーツモジュールを組み込んで配置することができます。<br />
+</p>
+
+
+<h3>2等分ペイン</h3>
+<div class="unit_pane2">
+	<div class="pane2L">
+		<h3>左側ペイン</h3>
+		<p>
+			ここは、左側ペインに記載されたテキストです。ここは、左側ペインに記載されたテキストです。ここは、左側ペインに記載されたテキストです。<br />
+		</p>
+	</div>
+	<div class="pane2R">
+		<h3>右側ペイン</h3>
+		<p>
+			ここは、右側ペインに記載されたテキストです。ここは、右側ペインに記載されたテキストです。ここは、右側ペインに記載されたテキストです。<br />
+		</p>
+	</div>
+</div><!-- /.unit_pane2 -->
+
+<div class="sourcecode"><pre>&lt;div class=&quot;<strong>unit_pane2</strong>&quot;&gt;
+    &lt;div class=&quot;<strong>pane2L</strong>&quot;&gt;<var>
+        &lt;h3&gt;左側ペイン&lt;/h3&gt;
+        &lt;p&gt;
+            ここは、左側ペインに記載されたテキスト。&lt;br /&gt;
+        &lt;/p&gt;
+    </var>&lt;/div&gt;
+    &lt;div class=&quot;<strong>pane2R</strong>&quot;&gt;<var>
+        &lt;h3&gt;右側ペイン&lt;/h3&gt;
+        &lt;p&gt;
+            ここは、右側ペインに記載されたテキスト。&lt;br /&gt;
+        &lt;/p&gt;
+    </var>&lt;/div&gt;
+&lt;/div&gt;&lt;!-- /.unit_pane2 --&gt;
+</pre></div>
+
+
+<h3>3等分ペイン</h3>
+<div class="unit_pane3">
+	<div class="pane3L">
+		<h3>左側ペイン</h3>
+		<p>
+			ここは、左側ペインに記載されたテキストです。ここは、左側ペインに記載されたテキストです。ここは、左側ペインに記載されたテキストです。<br />
+		</p>
+	</div>
+	<div class="pane3C">
+		<h3>中央ペイン</h3>
+		<p>
+			ここは、中央ペインに記載されたテキストです。ここは、中央ペインに記載されたテキストです。ここは、中央ペインに記載されたテキストです。<br />
+		</p>
+	</div>
+	<div class="pane3R">
+		<h3>右側ペイン</h3>
+		<p>
+			ここは、右側ペインに記載されたテキストです。ここは、右側ペインに記載されたテキストです。ここは、右側ペインに記載されたテキストです。<br />
+		</p>
+	</div>
+</div><!-- /.unit_pane3 -->
+
+<div class="sourcecode"><pre>&lt;div class=&quot;<strong>unit_pane3</strong>&quot;&gt;
+    &lt;div class=&quot;<strong>pane3L</strong>&quot;&gt;<var>
+        &lt;h3&gt;左側ペイン&lt;/h3&gt;
+        &lt;p&gt;
+            ここは、左側ペインに記載されたテキストです。&lt;br /&gt;
+        &lt;/p&gt;
+    </var>&lt;/div&gt;
+    &lt;div class=&quot;<strong>pane3C</strong>&quot;&gt;<var>
+        &lt;h3&gt;中央ペイン&lt;/h3&gt;
+        &lt;p&gt;
+            ここは、中央ペインに記載されたテキストです。&lt;br /&gt;
+        &lt;/p&gt;
+    </var>&lt;/div&gt;
+    &lt;div class=&quot;<strong>pane3R</strong>&quot;&gt;<var>
+        &lt;h3&gt;右側ペイン&lt;/h3&gt;
+        &lt;p&gt;
+            ここは、右側ペインに記載されたテキストです。&lt;br /&gt;
+        &lt;/p&gt;
+    </var>&lt;/div&gt;
+&lt;/div&gt;&lt;!-- /.unit_pane3 --&gt;
+</pre></div>
+
+<h3>4等分ペイン</h3>
+<div class="unit_pane4">
+	<div class="pane4L2">
+		<h3>左側2ペイン</h3>
+		<p>
+			ここは、左側ペインに記載されたテキストです。ここは、左側ペインに記載されたテキストです。ここは、左側ペインに記載されたテキストです。<br />
+		</p>
+	</div>
+	<div class="pane4L1">
+		<h3>左側1ペイン</h3>
+		<p>
+			ここは、左側ペインに記載されたテキストです。ここは、左側ペインに記載されたテキストです。ここは、左側ペインに記載されたテキストです。<br />
+		</p>
+	</div>
+	<div class="pane4R1">
+		<h3>右側1ペイン</h3>
+		<p>
+			ここは、右側ペインに記載されたテキストです。ここは、右側ペインに記載されたテキストです。ここは、右側ペインに記載されたテキストです。<br />
+		</p>
+	</div>
+	<div class="pane4R2">
+		<h3>右側2ペイン</h3>
+		<p>
+			ここは、右側ペインに記載されたテキストです。ここは、右側ペインに記載されたテキストです。ここは、右側ペインに記載されたテキストです。<br />
+		</p>
+	</div>
+</div><!-- /.unit_pane4 -->
+
+<div class="sourcecode"><pre>&lt;div class=&quot;<strong>unit_pane4</strong>&quot;&gt;
+    &lt;div class=&quot;<strong>pane4L2</strong>&quot;&gt;<var>
+        &lt;h3&gt;左側2ペイン&lt;/h3&gt;
+        &lt;p&gt;
+            ここは、左側ペインに記載されたテキストです。&lt;br /&gt;
+        &lt;/p&gt;
+    </var>&lt;/div&gt;
+    &lt;div class=&quot;<strong>pane4L1</strong>&quot;&gt;<var>
+        &lt;h3&gt;左側1ペイン&lt;/h3&gt;
+        &lt;p&gt;
+            ここは、左側ペインに記載されたテキストです。&lt;br /&gt;
+        &lt;/p&gt;
+    </var>&lt;/div&gt;
+    &lt;div class=&quot;<strong>pane4R1</strong>&quot;&gt;<var>
+        &lt;h3&gt;右側1ペイン&lt;/h3&gt;
+        &lt;p&gt;
+            ここは、右側ペインに記載されたテキストです。&lt;br /&gt;
+        &lt;/p&gt;
+    </var>&lt;/div&gt;
+    &lt;div class=&quot;<strong>pane4R2</strong>&quot;&gt;<var>
+        &lt;h3&gt;右側2ペイン&lt;/h3&gt;
+        &lt;p&gt;
+            ここは、右側ペインに記載されたテキストです。&lt;br /&gt;
+        &lt;/p&gt;
+    </var>&lt;/div&gt;
+&lt;/div&gt;&lt;!-- /.unit_pane4 --&gt;
+</pre></div>
+
+
+<h3>5等分ペイン</h3>
+<div class="unit_pane5">
+	<div class="pane5L2">
+		<h3>左側2ペイン</h3>
+		<p>
+			ここは、左側ペインに記載されたテキストです。ここは、左側ペインに記載されたテキストです。ここは、左側ペインに記載されたテキストです。<br />
+		</p>
+	</div>
+	<div class="pane5L1">
+		<h3>左側1ペイン</h3>
+		<p>
+			ここは、左側ペインに記載されたテキストです。ここは、左側ペインに記載されたテキストです。ここは、左側ペインに記載されたテキストです。<br />
+		</p>
+	</div>
+	<div class="pane5C">
+		<h3>中央ペイン</h3>
+		<p>
+			ここは、中央ペインに記載されたテキストです。ここは、中央ペインに記載されたテキストです。ここは、中央ペインに記載されたテキストです。<br />
+		</p>
+	</div>
+	<div class="pane5R1">
+		<h3>右側1ペイン</h3>
+		<p>
+			ここは、右側ペインに記載されたテキストです。ここは、右側ペインに記載されたテキストです。ここは、右側ペインに記載されたテキストです。<br />
+		</p>
+	</div>
+	<div class="pane5R2">
+		<h3>右側2ペイン</h3>
+		<p>
+			ここは、右側ペインに記載されたテキストです。ここは、右側ペインに記載されたテキストです。ここは、右側ペインに記載されたテキストです。<br />
+		</p>
+	</div>
+</div><!-- /.unit_pane5 -->
+
+<div class="sourcecode"><pre>&lt;div class=&quot;<strong>unit_pane5</strong>&quot;&gt;
+    &lt;div class=&quot;<strong>pane5L2</strong>&quot;&gt;<var>
+        &lt;h3&gt;左側2ペイン&lt;/h3&gt;
+        &lt;p&gt;
+            ここは、左側ペインに記載されたテキストです。&lt;br /&gt;
+        &lt;/p&gt;
+    </var>&lt;/div&gt;
+    &lt;div class=&quot;<strong>pane5L1</strong>&quot;&gt;<var>
+        &lt;h3&gt;左側1ペイン&lt;/h3&gt;
+        &lt;p&gt;
+            ここは、左側ペインに記載されたテキストです。&lt;br /&gt;
+        &lt;/p&gt;
+    </var>&lt;/div&gt;
+    &lt;div class=&quot;<strong>pane5C</strong>&quot;&gt;<var>
+        &lt;h3&gt;中央ペイン&lt;/h3&gt;
+        &lt;p&gt;
+            ここは、中央ペインに記載されたテキストです。&lt;br /&gt;
+        &lt;/p&gt;
+    </var>&lt;/div&gt;
+    &lt;div class=&quot;<strong>pane5R1</strong>&quot;&gt;<var>
+        &lt;h3&gt;右側1ペイン&lt;/h3&gt;
+        &lt;p&gt;
+            ここは、右側ペインに記載されたテキストです。&lt;br /&gt;
+        &lt;/p&gt;
+    </var>&lt;/div&gt;
+    &lt;div class=&quot;<strong>pane5R2</strong>&quot;&gt;<var>
+        &lt;h3&gt;右側2ペイン&lt;/h3&gt;
+        &lt;p&gt;
+            ここは、右側ペインに記載されたテキストです。&lt;br /&gt;
+        &lt;/p&gt;
+    </var>&lt;/div&gt;
+&lt;/div&gt;&lt;!-- /.unit_pane5 --&gt;
+</pre></div>
+
+<ul class="annotation">
+	<li>※Internet Explorer で上下に余計なマージンが入る場合があります。このときは、各ペイン(例えば <code>.pane2L</code>, <code>.pane2R</code>, <code>.pane3L</code>, <code>.pane4L2</code>, <code>.pane5L2</code> など)内の最初の要素に <code>.mt0</code> を、最後の要素に <code>.mb0</code> を設定してください。</li>
+</ul>
+
+
+
+
+
+<px:back2top />
+
+
+<a id="cont_anch_unit_thumblist"></a>
+<h2>サムネイル付きリストユニット</h2>
+
+<div class="unit_thumblist">
+	<ul>
+		<li>
+			<div class="unit_thumblistImage"><px:img src="sampleimage.gif" alt="" /></div>
+			<div class="unit_thumblistText">
+				<p>
+					サムネイルに対するテキストなどを表示するエリアです。<br />
+				</p>
+			</div>
+		</li>
+	</ul>
+</div><!-- /.unit_thumblist -->
+
+<div class="sourcecode"><pre>&lt;div class=&quot;<strong>unit_thumblist</strong>&quot;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;div class=&quot;<strong>unit_thumblistImage</strong>&quot;&gt;&lt;img src=&quot;<var>sampleimage.gif</var>&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;
+      &lt;div class=&quot;<strong>unit_thumblistText</strong>&quot;&gt;<var>
+        &lt;p&gt;
+          サムネイルに対するテキストなどを表示するエリアです。&lt;br /&gt;
+        &lt;/p&gt;
+      </var>&lt;/div&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;&lt;!-- /.unit_thumblist --&gt;
+</pre></div>
+
+<p>
+	<code>.unit_thumblistImage</code> には画像を配置します。画像の大きさは幅と高さが統一される必要があります。<br />
+</p>
+<p>
+	<code>.unit_thumblistText</code> 内には、任意の複数のパーツモジュールを組み込んで配置することができます。<br />
+</p>
+
+<div class="unit_thumblist">
+	<ul>
+		<li>
+			<div class="unit_thumblistImage"><px:img src="sampleimage.gif" alt="" /></div>
+			<div class="unit_thumblistText">
+				<h2>見出し</h2>
+				<p>
+					サムネイルに対するテキストなどを表示するエリアです。<br />
+				</p>
+				<ul class="none">
+					<li class="AlignR"><a href="#" tstyle="inside">リンクテキスト</a></li>
+				</ul>
+			</div>
+		</li>
+		<li>
+			<div class="unit_thumblistImage"><px:img src="sampleimage.gif" alt="" /></div>
+			<div class="unit_thumblistText">
+				<p>
+					サムネイルに対するテキストなどを表示するエリアです。サムネイルに対するテキストなどを表示するエリアです。サムネイルに対するテキストなどを表示するエリアです。サムネイルに対するテキストなどを表示するエリアです。<br />
+				</p>
+			</div>
+		</li>
+		<li>
+			<div class="unit_thumblistImage"><px:img src="sampleimage.gif" alt="" /></div>
+			<div class="unit_thumblistText">
+				<p>
+					サムネイルに対するテキストなどを表示するエリアです。サムネイルに対するテキストなどを表示するエリアです。サムネイルに対するテキストなどを表示するエリアです。サムネイルに対するテキストなどを表示するエリアです。サムネイルに対するテキストなどを表示するエリアです。サムネイルに対するテキストなどを表示するエリアです。サムネイルに対するテキストなどを表示するエリアです。サムネイルに対するテキストなどを表示するエリアです。<br />
+				</p>
+			</div>
+		</li>
+	</ul>
+</div>
+
+<ul class="annotation">
+	<li>※Internet Explorer で上下に余計なマージンが入る場合があります。このときは、 <code>.unit_thumblistImage</code> および <code>.unit_thumblistText</code> 内の最初の要素に <code>.mt0</code> を、最後の要素に <code>.mb0</code> を設定してください。</li>
+</ul>
+
+
+
+
+<px:back2top />
+
+
+
+<a id="cont_anch_unit_pager"></a>
+<h2>ページャーユニット</h2>
+
+<?php
+	print $theme->mk_pager( 1000 , 1 , 5 , array( 'href'=>'javascript:;' ) );
+?>
+
+<p>
+	ページャーは、<code>$theme->mk_pager()</code> を通じて作成します。Pickles Framework 0.6.3 以降で利用可能です。<br />
+</p>
+
+<div class="sourcecode"><pre>&lt;?php
+  print $theme-&gt;mk_pager( ${総件数} , ${現在のページ番号} , ${ページ当たりの表示件数} );
+?&gt;
+</pre></div>
+
+<p>
+	<code>$theme->mk_pager()</code> が出力するHTMLソースは、次のような構造です。<br />
+</p>
+
+<blockquote class="sourcecode"><pre><?php
+print text::text2html( $theme->mk_pager( 20 , 1 , 5 , array( 'href'=>'#' ) ) );
+?></pre></blockquote>
+
+
+<ul class="annotation">
+	<li>※<code>$theme->mk_pager()</code> の使い方について、詳しくはクラスリファレンスページを参照してください。</li>
+</ul>
+
+
+
+

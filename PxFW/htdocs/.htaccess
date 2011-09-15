@@ -1,0 +1,7 @@
+# for PxFW EZmode.
+RewriteEngine on
+RewriteRule ^$ /_pickles_execute.php/index.pxhtml
+RewriteRule ^(.*)\.html$ /_pickles_execute.php/$1.pxhtml
+RewriteRule ^(.*)/$ /_pickles_execute.php/$1/index.pxhtml
+
+Options -MultiViews
